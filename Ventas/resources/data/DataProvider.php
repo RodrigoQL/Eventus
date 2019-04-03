@@ -2,7 +2,7 @@
 	$servername = "localhost";
 	$dbUsername = "wwwplust_";
 	$dbPassword = "Even7us2019";
-	$dbName = "wwwplust_Eventusdb";
+	$dbName = "wwwplust_";
 	$md5Hash = "Even7us2019";
 	function SqlSelect($sql){
 		global $servername, $dbUsername, $password, $dbName;

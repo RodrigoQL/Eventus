@@ -1,0 +1,28 @@
+#navebar{
+    text-align: center;
+    line-height: 100px;
+    vertical-align: center;
+    color: white;
+    background: black;
+}
+body{
+    background:#d8d8d8;
+}
+#content {
+    line-height:200px;
+    height:200px;
+    vertical-align:middle;
+    
+}
+
+#section_1 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}

@@ -1,11 +1,10 @@
 <?php
 	$servername = "localhost";
-	$dbUsername = "wwwplust_";
-	$dbPassword = "Even7us2019";
-	$dbName = "wwwplust_";
-	$md5Hash = "Even7us2019";
+	$dbUsername = "wwwplust_equipo1";
+	$dbPassword = "eventus123";
+	$dbName = "wwwplust_ventaseq1";
 	function SqlSelect($sql){
-		global $servername, $dbUsername, $password, $dbName;
+		global $servername, $dbUsername, $dbPassword, $dbName;
 		$conn = mysqli_connect( $servername, $dbUsername, $dbPassword, $dbName);
 		if (!$conn) {
 			die("Connection failed: " . mysqli_connect_error());

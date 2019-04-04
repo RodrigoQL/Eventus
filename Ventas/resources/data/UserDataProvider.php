@@ -8,9 +8,13 @@
 		return SqlSelect($sql);
     }
 
-	function GetUser($username){
+	function GetUser($username, $password){
 		global $selectUserColumns;
-		$sql = "SELECT ".$selectUserColumns." FROM User WHERE Username = ".$username.";";
-		return SqlSelect($sql);
+		$sql = "SELECT ".$selectUserColumns." FROM User WHERE Username = '".$username."' AND Password = '".$password."';";
+		$userArray = SqlSelect($sql);
+		$rowCount = count( $userArray );
+		if( $rowCount > 0 ){
+			return $userArray[0];
+		}
 	}
 ?>

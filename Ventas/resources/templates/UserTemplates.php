@@ -1,8 +1,5 @@
 <?php
-    include("resources/data/UserDataProvider.php");
-
-    function UserDropdown(){
-        $users = GetAllUsers();
+    function UserDropdown($users){
         $html = '<select name="selectedUser" class="form-control">';
         foreach($users as $row) {
             $user_name_lastname = $row['Name']." ".$row['Lastname'];

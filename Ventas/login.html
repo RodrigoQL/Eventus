@@ -38,8 +38,8 @@
 
 <script>
     $('#submitButton').click(function(){
-        var username = $('#username').val;
-        var password = $('#password').val;
+        var username = $('#username').val();
+        var password = $('#password').val();
         $.post("resources/xControllers.php", 
         {
             method: "Login",

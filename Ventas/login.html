@@ -43,14 +43,19 @@
         $.post("resources/Controllers.php", 
         {
             function: "Login",
-
             username: username,
-
             password: password
         },
         
         function(data){
-            alert(data)
+            var typeId = parseInt(data);
+            if (typeId == 1){
+                window.location.href = "manager.html";
+            }else if (typeId == 2){
+                window.location.href = "seller.html";
+            }else{
+                alert("Credenciales Incorrectas")
+            }
         });
     
     })

@@ -13,6 +13,7 @@
         if ($user){
             session_start();
             $_SESSION['UserTypeID'] = $user['UserTypeID'];
+            $_SESSION["UserID"] = $user['ID'];
             return $user['UserTypeID'];
         }else{
             return 0;

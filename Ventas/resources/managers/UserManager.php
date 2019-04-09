@@ -19,4 +19,15 @@
             return 0;
         }
     }
+
+    function CheckSession(){
+        session_start();
+        $userID = $_SESSION['UserID'];
+        return $userID;
+    }
+
+    function Logout(){
+        session_start();
+        session_destroy();
+    }
 ?>

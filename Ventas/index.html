@@ -37,6 +37,10 @@
     </div>
 
 <script>
+    window.onload = function() {
+        checkSession();
+    };
+
     $('#submitButton').click(function(){
         var username = $('#username').val();
         var password = $('#password').val();
@@ -49,16 +53,36 @@
         
         function(data){
             var typeId = parseInt(data);
-            if (typeId == 1){
-                window.location.href = "manager.html";
-            }else if (typeId == 2){
-                window.location.href = "seller.html";
+            if (typeId) {
+                redirect(typeId);
             }else{
                 alert("Credenciales Incorrectas")
             }
         });
     
-    })
+    });
+
+    function checkSession(){
+        $.post("resources/Controllers.php", 
+        {
+            function: "CheckSession",
+        },
+        
+        function(data){
+            var typeId = parseInt(data);
+            if (typeId) {
+                redirect(typeId);
+            }
+        });
+    }
+
+    function redirect(typeId){
+        if (typeId == 1){
+            window.location.href = "manager.html";
+        }else if (typeId == 2){
+            window.location.href = "seller.html";
+        }
+    };
 </script>
     
     

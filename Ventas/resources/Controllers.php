@@ -14,6 +14,12 @@
             case "Login":
                 echo Login($_POST['username'], $_POST['password']);
                 return;
+            case "Logout":
+                echo Logout();
+                return;
+            case "CheckSession":
+                echo CheckSession();
+                return;
         }
     }
     

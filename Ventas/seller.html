@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Nueva Venta</title>
+    <title>Sistema</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -13,39 +13,48 @@
 </head>
 
 <body>
-    <form action="index.html">
-        <input type="submit" value="Inicio" />
-    </form>
-    <form action="comissions.html">
-        <input type="submit" value="Comisiones" />
-    </form>
-    <form action="new_sale.html">
-        <input type="submit" value="Nueva Venta" />
-    </form>
-    <h1>Nueva Venta<h2>
-            <!-- PHP AQUI -->
-            <table>
-                <tr>
-                    <th scope="col">dog</th>
-                    <th scope="col">cat</th>
-                    <th scope="col">horse</th>
-                    <th scope="col">iguana</th>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>2</td>
-                    <td>10</td>
-                    <td>500</td>
-                </tr>
+        <form action="comissions.html">
+                <input type="submit" value="Comisiones" />
+            </form>
+            <form action="sales.html">
+                    <input type="submit" value="Ventas" />
+            </form>
+            <form action="new_sale.html">
+                    <input type="submit" value="Nueva Venta" />
+            </form>
+    <div class="row" id="navebar">
+        <div class="col-sm-4">Sistema de Ventas - Vendedor</div>
+        <div class="col-sm-4" id="navebar">Jorge Antonio Ramirez Padilla</div>
+        <div class="col-sm-4" id="navebar">03/04/2019</div>
+    </div>
+    <div id="section_1">
+        <div class="container">
+            <div class="d-flex justify-content-sm-center bg-warning mb-5">
+                <div align="center" class="col-sm-6">
+                    <button class="btn btn-primary">Ventas</button>
+                </div>
+                <div align="center" class="col-sm-6">
+                    <button type="button" class="btn btn-primary">Comisiones</button>
+                </div>
+                <br><br>
+                <div align="center">
+                    <button id="logoutButton" class="btn btn-danger">Salir</button>
+                </div>
+            </div>
+        </div>
+    <script>
+        $('#logoutButton').click(function () {
+            $.post("resources/Controllers.php",
+                {
+                    function: "Logout",
+                },
 
-            </table>
-            <!-- /PHP AQUI -->
-            <p> Filtrar por fecha de ingreso del:</p>
-            <input type="date"> al <input type="date"><br>
-            <button type="button" class="btn btn-primary">Aceptar</button>
-            <p>Filtrar por fecha de pago del:</p>
-            <input type="date"> al <input type="date"><br>
-            <button type="button" class="btn btn-primary">Aceptar</button>
+                function (data) {
+                    window.location.href = "index.html";
+                });
+
+        });
+    </script>
 </body>
 
 </html>

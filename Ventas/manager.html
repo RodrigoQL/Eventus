@@ -19,9 +19,6 @@
             <form action="manager_sales.html">
                     <input type="submit" value="Ventas" />
             </form>
-            <form action="new_sale.html">
-                    <input type="submit" value="Nueva Venta" />
-            </form>
     <div class="row" id="navebar">
         <div class="col-sm-4">Sistema de Ventas - Administrador</div>
         <div class="col-sm-4" id="navebar">Jorge Antonio Ramirez Padilla</div>
@@ -46,8 +43,10 @@
             </div>
         </div>
     <script>
-
-    $('#logoutButton').click(function () {
+        window.onload = function () {
+            checkSession();
+        };
+        $('#logoutButton').click(function () {
             $.post("resources/Controllers.php",
                 {
                     function: "Logout",
@@ -59,6 +58,19 @@
 
         });
 
+        function checkSession() {
+            $.post("resources/Controllers.php",
+                {
+                    function: "CheckSession",
+                },
+
+                function (data) {
+                    var typeId = parseInt(data);
+                    if (typeId != 1) {
+                        window.location.href = "index.html";
+                    }
+                });
+        }
     </script>
 </body>
 

@@ -61,6 +61,21 @@
         
         window.onload = function(){
             getProducts();
+            checkSession();
+        }
+
+        function checkSession() {
+            $.post("resources/Controllers.php",
+                {
+                    function: "CheckSession",
+                },
+
+                function (data) {
+                    var typeId = parseInt(data);
+                    if (typeId != 2) {
+                        window.location.href = "index.html";
+                    }
+                });
         }
 
         $('#submitButton').click(function(){

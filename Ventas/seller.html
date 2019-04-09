@@ -40,6 +40,9 @@
             </div>
         </div>
     <script>
+        window.onload = function () {
+            checkSession();
+        };
         $('#logoutButton').click(function () {
             $.post("resources/Controllers.php",
                 {
@@ -51,6 +54,20 @@
                 });
 
         });
+
+        function checkSession() {
+            $.post("resources/Controllers.php",
+                {
+                    function: "CheckSession",
+                },
+
+                function (data) {
+                    var typeId = parseInt(data);
+                    if (typeId != 2) {
+                        window.location.href = "index.html";
+                    }
+                });
+        }
     </script>
 </body>
 

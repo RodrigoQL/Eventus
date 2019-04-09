@@ -24,10 +24,8 @@
 		}
 		$sql = mysqli_query($conn, $query);
 		if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
 			return true;
 		} else {
-			echo "Error: " . $sql . "<br>" . $query . "<br>" .$conn->error;
 			return false;
 		}	
 		mysqli_close($conn);

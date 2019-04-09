@@ -7,38 +7,62 @@
     <title>Sistema</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-        <form action="comissions.html">
-                <input type="submit" value="Comisiones" />
-            </form>
-            <form action="sales.html">
-                    <input type="submit" value="Ventas" />
-            </form>
-            <form action="new_sale.html">
-                    <input type="submit" value="Nueva Venta" />
-            </form>
-    <div class="row" id="navebar">
-        <div class="col-sm-4">Sistema de Ventas</div>
-        <div class="col-sm-4" id="navebar">Jorge Antonio Ramirez Padilla</div>
-        <div class="col-sm-4" id="navebar">03/04/2019</div>
+    <div align="center">
+        <h1>Login</h1>
+        <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Finspirationseek.com%2Fwp-content%2Fuploads%2F2016%2F02%2FCute-Dog-White-Pictures.jpg&f=1"
+            height="200px">
+            <fieldset>
+                <legend>Login Details</legend>
+                <div>
+                    <label for="user-name">Username:</label>
+                    <input name="user-name" id="username" type="text" placeholder="Your username is your email address" required
+                        autofocus>
+                </div>
+                <div>
+                    <label for="password">Password:</label>
+                    <input name="password" id="password" type="password" placeholder="6 digits, a combination of numbers and letters"
+                        required>
+                </div>
+                <div>
+                    <input class="btn btn-default" name="login" id="submitButton" type="submit">
+                </div>
+            </fieldset>
     </div>
-    <div id="section_1">
-        <div class="container">
-            <div class="d-flex justify-content-sm-center bg-warning mb-5">
-                <div class="col-sm-4 pagination-centered">
-                    <button type="button" class="btn btn-primary">Ventas</button>
-                </div>
-                <div class="col-sm-4" align="center">
-                    <button type="button" class="btn btn-primary">Comisiones</button>
-                </div>
-            </div>
-        </div>
-        <button type="button" class="btn btn-primary">Salir</button>
+
+<script>
+    $('#submitButton').click(function(){
+        var username = $('#username').val();
+        var password = $('#password').val();
+        $.post("resources/Controllers.php", 
+        {
+            function: "Login",
+            username: username,
+            password: password
+        },
+        
+        function(data){
+            var typeId = parseInt(data);
+            if (typeId == 1){
+                window.location.href = "manager.html";
+            }else if (typeId == 2){
+                window.location.href = "seller.html";
+            }else{
+                alert("Credenciales Incorrectas")
+            }
+        });
+    
+    })
+</script>
+    
+    
+
 </body>
 
 </html>

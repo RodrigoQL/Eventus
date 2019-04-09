@@ -23,16 +23,19 @@
         <input type="submit" value="Comisiones" />
     </form>
     <h1>Nueva Venta</h1>
-    <form id="new_sale" action="new_sale.html">
         <fieldset>
             <legend>Ingresar Datos</legend>
             <div>
-                <label for="client-name">Cliente:</label>
-                <input name="client-name" type="text" placeholder="Nombre del cliente" required autofocus>
+                <label for="client-firstname">Nombre Cliente:</label>
+                <input name="client-firstname" id="clientfirstname" type="text" placeholder="Nombre del cliente" required autofocus>
+            </div>
+            <div>
+                <label for="client-lastname">Apellido Cliente:</label>
+                <input name="client-lastname" id="clientlastname" type="text" placeholder="Apellido del cliente" required autofocus>
             </div>
             <div>
                 <label for="company">Empresa:</label>
-                <input name="company" type="text" placeholder="Nombre de la empresa" required autofocus>
+                <input name="company" id="company" type="text" placeholder="Nombre de la empresa" required autofocus>
             </div>
             <div>
                 <label for="concept">Concepto:</label>
@@ -40,7 +43,7 @@
             </div>
             <div>
                 <label for="gross-amount">Monto Bruto:</label>
-                <input name="gross-amount" type="number" required autofocus>
+                <input name="gross-amount" id="amount" type="number" required autofocus>
             </div>
             <div>
                 <label for="date-in">Fecha de ingreso:</label>
@@ -48,17 +51,11 @@
             </div>
             <div>
                 <label for="payment-date">Fecha de pago:</label>
-                <input name="payment-date" type="date" required autofocus>
+                <input name="payment-date" id="payday" type="date" required autofocus>
             </div>
-            <div>
+            <div id="productcontainer">
                 <label for="product-line">Linea de producto:</label>
-                <!-- PHP AQUI -->
-                <select>
-                    <option value="" disabled="disabled" selected="selected">Please select a name</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                </select>
-                <!-- /PHP AQUI -->
+
             </div>
             <div>
                 <label for="invoice-number">Factura:</label>
@@ -69,13 +66,61 @@
                 <input name="payment-status" type="checkbox" required autofocus>
             </div>
             <div>
-                <input class="btn btn-default" name="search" type="submit" value="Buscar">
+                <input class="btn btn-default" name="submit" id="submitButton" type="submit" value ="Ingresar venta">
             </div>
             <div>
                 <input class="btn btn-danger" name="reset" type="reset" value="Reset">
             </div>
         </fieldset>
-    </form>
+    <script>
+        
+        window.onload = function(){
+            getProducts();
+        }
+
+        $('#submitButton').click(function(){
+            var clientfirstname = $('#clientfirstname').val();
+            var clientlastname = $('#clientlastname').val();
+            var company = $('#company').val();
+            var amount = $('#amount').val();
+            var payday = $('#payday').val();
+            var product = $('#selectedProduct').val();
+
+            alert(clientfirstname);
+            alert(clientlastname);
+            alert(company);
+            alert(amount);
+            alert(payday);
+            alert(product);
+
+            $.post("resources/Controllers.php", 
+            {
+                function: "CreateSale",
+                clientfirstname: clientfirstname,
+                clientlastname: clientlastname,
+                company: company,
+                amount: amount,
+                payday: payday,
+                producttypeid: product
+            },
+
+            function(data){
+            
+            });
+        
+        })
+
+        function getProducts(){
+        $.post("resources/Controllers.php", 
+        {
+            function: "ProductsDropdown",
+        },
+        
+        function(data){
+            $("#productcontainer").prepend(data);
+        });
+        }
+    </script>
 </body>
 
 </html>

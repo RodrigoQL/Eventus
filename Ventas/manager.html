@@ -13,32 +13,53 @@
 </head>
 
 <body>
-        <form action="comissions.html">
+        <form action="manager_comissions.html">
                 <input type="submit" value="Comisiones" />
             </form>
-            <form action="sales.html">
+            <form action="manager_sales.html">
                     <input type="submit" value="Ventas" />
             </form>
             <form action="new_sale.html">
                     <input type="submit" value="Nueva Venta" />
             </form>
     <div class="row" id="navebar">
-        <div class="col-sm-4">Sistema de Ventas</div>
+        <div class="col-sm-4">Sistema de Ventas - Administrador</div>
         <div class="col-sm-4" id="navebar">Jorge Antonio Ramirez Padilla</div>
         <div class="col-sm-4" id="navebar">03/04/2019</div>
     </div>
     <div id="section_1">
         <div class="container">
             <div class="d-flex justify-content-sm-center bg-warning mb-5">
-                <div class="col-sm-4 pagination-centered">
-                    <button type="button" class="btn btn-primary">Ventas</button>
+                <div align="center" class="col-sm-4">
+                    <button class="btn btn-primary">Ventas</button>
                 </div>
-                <div class="col-sm-4" align="center">
+                <div align="center" class="col-sm-4">
                     <button type="button" class="btn btn-primary">Comisiones</button>
+                </div>
+                <div align="center" class="col-sm-4">
+                    <button type="button" class="btn btn-primary">Admin</button>
+                </div>
+                <br><br>
+                <div align="center">
+                    <button id="logoutButton" class="btn btn-danger">Salir</button>
                 </div>
             </div>
         </div>
-        <button type="button" class="btn btn-primary">Salir</button>
+    <script>
+
+    $('#logoutButton').click(function () {
+            $.post("resources/Controllers.php",
+                {
+                    function: "Logout",
+                },
+
+                function (data) {
+                    window.location.href = "index.html";
+                });
+
+        });
+
+    </script>
 </body>
 
 </html>

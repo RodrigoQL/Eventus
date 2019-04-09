@@ -14,78 +14,73 @@
 </head>
 
 <body>
-    <div align="center">
+    <div class="login-form" align="center">
         <h1>Login</h1>
         <img src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Finspirationseek.com%2Fwp-content%2Fuploads%2F2016%2F02%2FCute-Dog-White-Pictures.jpg&f=1"
             height="200px">
-            <fieldset>
-                <legend>Login Details</legend>
-                <div>
-                    <label for="user-name">Username:</label>
-                    <input name="user-name" id="username" type="text" placeholder="Your username is your email address" required
-                        autofocus>
-                </div>
-                <div>
-                    <label for="password">Password:</label>
-                    <input name="password" id="password" type="password" placeholder="6 digits, a combination of numbers and letters"
-                        required>
-                </div>
-                <div>
-                    <input class="btn btn-default" name="login" id="submitButton" type="submit">
-                </div>
-            </fieldset>
+        <br><br>
+        <div class="form-group">
+            <input class="form-control" name="user-name" id="username" type="text" placeholder="Usuario" required
+                autofocus>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" id="password" type="password" placeholder="Contraseña" required>
+        </div>
+        <div>
+            <input class="btn btn-primary" name="login" id="submitButton" type="submit">
+        </div>
     </div>
 
-<script>
-    window.onload = function() {
-        checkSession();
-    };
+    <script>
+        window.onload = function () {
+            checkSession();
+        };
 
-    $('#submitButton').click(function(){
-        var username = $('#username').val();
-        var password = $('#password').val();
-        $.post("resources/Controllers.php", 
-        {
-            function: "Login",
-            username: username,
-            password: password
-        },
-        
-        function(data){
-            var typeId = parseInt(data);
-            if (typeId) {
-                redirect(typeId);
-            }else{
-                alert("Credenciales Incorrectas")
-            }
+        $('#submitButton').click(function () {
+            var username = $('#username').val();
+            var password = $('#password').val();
+            $.post("resources/Controllers.php",
+                {
+                    function: "Login",
+                    username: username,
+                    password: password
+                },
+
+                function (data) {
+                    var typeId = parseInt(data);
+                    if (typeId) {
+                        redirect(typeId);
+                    } else {
+                        alert("Credenciales Incorrectas")
+                    }
+                });
+
         });
-    
-    });
 
-    function checkSession(){
-        $.post("resources/Controllers.php", 
-        {
-            function: "CheckSession",
-        },
-        
-        function(data){
-            var typeId = parseInt(data);
-            if (typeId) {
-                redirect(typeId);
-            }
-        });
-    }
+        function checkSession() {
+            $.post("resources/Controllers.php",
+                {
+                    function: "CheckSession",
+                },
 
-    function redirect(typeId){
-        if (typeId == 1){
-            window.location.href = "manager.html";
-        }else if (typeId == 2){
-            window.location.href = "seller.html";
+                function (data) {
+                    var typeId = parseInt(data);
+                    if (typeId) {
+                        redirect(typeId);
+                    }
+                });
         }
-    };
-</script>
-    
-    
+
+        function redirect(typeId) {
+            if (typeId == 1) {
+                window.location.href = "manager.html";
+            } else if (typeId == 2) {
+                window.location.href = "seller.html";
+            }
+        };
+    </script>
+
+
 
 </body>
 

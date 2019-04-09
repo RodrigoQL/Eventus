@@ -1,6 +1,6 @@
 <?php
-    include("resources/templates/UserTemplates.php");
-    include("resources/data/UserDataProvider.php");
+    include("templates/UserTemplates.php");
+    include("data/UserDataProvider.php");
 
     function HtmlUserDropdown(){
         $users = GetAllUsers();
@@ -12,7 +12,7 @@
         $user = GetUser($username, $password);
         if ($user){
             session_start();
-            $_SESSION['ID'] = $user['ID'];
+            $_SESSION['UserTypeID'] = $user['UserTypeID'];
             return $user['UserTypeID'];
         }else{
             return 0;

@@ -27,7 +27,7 @@
                 </div>
                 <div>
                     <label for="password">Password:</label>
-                    <input name="password" id="passwdord" type="password" placeholder="6 digits, a combination of numbers and letters"
+                    <input name="password" id="password" type="password" placeholder="6 digits, a combination of numbers and letters"
                         required>
                 </div>
                 <div>
@@ -40,9 +40,9 @@
     $('#submitButton').click(function(){
         var username = $('#username').val();
         var password = $('#password').val();
-        $.post("resources/xControllers.php", 
+        $.post("resources/Controllers.php", 
         {
-            method: "Login",
+            function: "Login",
 
             username: username,
 

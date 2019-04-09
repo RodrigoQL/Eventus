@@ -1,6 +1,6 @@
 <?php
-    include("resources/templates/SaleTemplates.php");
-    include("resources/data/ProductTypeDataProvider.php");
+    include("templates/SaleTemplates.php");
+    include("data/ProductTypeDataProvider.php");
 
     function HtmlProductsDropdown(){
         $products = GetAllProductTypes();

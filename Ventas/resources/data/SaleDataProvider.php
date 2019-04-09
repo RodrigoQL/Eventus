@@ -1,5 +1,4 @@
 <?php
-	include("DataProvider.php");
 	$insertSaleColumns = "SellerID, ClientName, ClientLastname, ClientCompany, Amount, PayDate, ProductTypeID, BillNumber";
 	$selectSaleColumns = "ID, SellerID, ClientName, ClientLastname, ClientCompany, Amount, PayDate, ProductTypeID, BillNumber, CreatedDate, Payed, Validated";
 

@@ -1,5 +1,4 @@
 <?php
-	include("DataProvider.php");
 	$selectProductTypeColumns = "ID, Name, Comission";
 
     function GetAllProductTypes(){

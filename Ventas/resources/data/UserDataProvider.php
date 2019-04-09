@@ -1,5 +1,4 @@
 <?php
-	include("DataProvider.php");
 	$selectUserColumns = "ID, Username, Password, Email, Phone, Name, Lastname, UserTypeID";
 
     function GetAllUsers(){

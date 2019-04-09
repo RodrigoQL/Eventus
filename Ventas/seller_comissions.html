@@ -22,27 +22,31 @@
     <form action="new_sale.html">
         <input type="submit" value="Nueva Venta" />
     </form>
-    <h1>Comisiones de Jorge</h1>
-    <!-- PHP AQUI -->
-    <table>
-        <tr>
-            <th scope="col">dog</th>
-            <th scope="col">cat</th>
-            <th scope="col">horse</th>
-            <th scope="col">iguana</th>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>2</td>
-            <td>10</td>
-            <td>500</td>
-        </tr>
 
-    </table>
-    <!-- /PHP AQUI -->
+    <h1>Comisiones de Jorge</h1>
+    <div id="comissions">
+            <label for="product-line">Linea de producto:</label>
+
+    </div>
+
     <p> Filtrar por fecha de ingreso del:</p>
     <input type="date"> al <input type="date"><br>
-    <button type="button" class="btn btn-primary">Aceptar</button>
+    <button type="button" id="submitButton" class="btn btn-primary">Aceptar</button>
+
+    <script>
+        $('#submitButton').click(function(){
+            var product = $('#selectedProduct').val();  
+
+            $.post("resources/Controllers.php", 
+        {
+            function: "SellersDropdown",
+        },
+        
+            function(data){
+                $("#comissions").prepend(data);
+            });  
+        })
+    </script>
 </body>
 
 </html>

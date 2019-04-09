@@ -21,9 +21,8 @@
                 echo CheckSession();
                 return;
             case "CreateSale":
-            $clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber
-                echo CreateSale($_POST['clientfirstname'], $_POST['clientlastname'], $_POST['company'], $_POST['amount'], $_POST['payday'], $_POST['producttypeid'], $_POST['billnumber'])
-                return
+                echo CreateSale($_POST['clientfirstname'], $_POST['clientlastname'], $_POST['company'], $_POST['amount'], $_POST['payday'], $_POST['producttypeid'], $_POST['billnumber']);
+                return;
         }
     }
     

@@ -11,6 +11,6 @@
     function CreateSale($clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber){
         session_start();
         $userID = $_SESSION['UserID'];
-        return InsertSale($userID, $clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber)
+        return InsertSale($userID, $clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber);
     }
 ?>

@@ -5,7 +5,7 @@
 	function InsertSale($sellerID, $clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber){
 		global $insertSaleColumns;
 		$sql = "INSERT INTO Sale (".$insertSaleColumns.") VALUES (".ValuesToString([$sellerID, $clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber]).");";
-        return SqlInsert($sql);
+		return SqlInsert($sql);
 	}
 
 	function UpdatedPayed($id, $value){

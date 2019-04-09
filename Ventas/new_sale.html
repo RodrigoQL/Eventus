@@ -38,16 +38,8 @@
                 <input name="company" id="company" type="text" placeholder="Nombre de la empresa" required autofocus>
             </div>
             <div>
-                <label for="concept">Concepto:</label>
-                <input name="concept" type="text" placeholder="Concepto de venta" required autofocus>
-            </div>
-            <div>
                 <label for="gross-amount">Monto Bruto:</label>
                 <input name="gross-amount" id="amount" type="number" required autofocus>
-            </div>
-            <div>
-                <label for="date-in">Fecha de ingreso:</label>
-                <input name="date-in" type="date" required autofocus>
             </div>
             <div>
                 <label for="payment-date">Fecha de pago:</label>
@@ -59,17 +51,10 @@
             </div>
             <div>
                 <label for="invoice-number">Factura:</label>
-                <input name="invoice-number" type="number" required autofocus>
-            </div>
-            <div>
-                <label for="payment-status">Estatus:</label>
-                <input name="payment-status" type="checkbox" required autofocus>
+                <input name="invoice-number" id="billnumber" type="text" required autofocus>
             </div>
             <div>
                 <input class="btn btn-default" name="submit" id="submitButton" type="submit" value ="Ingresar venta">
-            </div>
-            <div>
-                <input class="btn btn-danger" name="reset" type="reset" value="Reset">
             </div>
         </fieldset>
     <script>
@@ -85,13 +70,7 @@
             var amount = $('#amount').val();
             var payday = $('#payday').val();
             var product = $('#selectedProduct').val();
-
-            alert(clientfirstname);
-            alert(clientlastname);
-            alert(company);
-            alert(amount);
-            alert(payday);
-            alert(product);
+            var billnumber = $('#billnumber').val();
 
             $.post("resources/Controllers.php", 
             {
@@ -101,11 +80,12 @@
                 company: company,
                 amount: amount,
                 payday: payday,
+                billnumber: billnumber,
                 producttypeid: product
             },
 
             function(data){
-            
+                alert(data);
             });
         
         })

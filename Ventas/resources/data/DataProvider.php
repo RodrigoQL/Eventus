@@ -34,7 +34,7 @@
     }
     
     function ValuesToString($arguments){
-        $value = "(";
+        $value = "";
         $i = 0;
         $len = count($arguments);
         foreach ($arguments as &$element) {
@@ -45,7 +45,7 @@
 
             $i++;
         }
-        $value .= ")";
+        $value .= "";
         return $value;
     }
 ?>

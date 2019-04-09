@@ -1,9 +1,9 @@
 <?php
 	$selectUserColumns = "ID, Username, Password, Email, Phone, Name, Lastname, UserTypeID";
 
-    function GetAllUsers(){
+    function GetAllSellers(){
         global $selectUserColumns;
-		$sql = "SELECT ".$selectUserColumns." FROM User;";
+		$sql = "SELECT ".$selectUserColumns." FROM User WHERE UserTypeID = 2;";
 		return SqlSelect($sql);
     }
 

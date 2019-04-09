@@ -5,8 +5,8 @@
 	if($_POST['function']){
         $function = $_POST['function'];
         switch ($function) {
-            case "UsersDropdown":
-                echo HtmlUserDropdown();
+            case "SellersDropdown":
+                echo HtmlSellerDropdown();
                 return;
             case "ProductsDropdown":
                 echo HtmlProductsDropdown();

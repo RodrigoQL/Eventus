@@ -1,5 +1,5 @@
 <?php
-    function UserDropdown($users){
+    function SellerDropdown($users){
         $html = '<select name="selectedUser" class="form-control">';
         foreach($users as $row) {
             $user_name_lastname = $row['Name']." ".$row['Lastname'];

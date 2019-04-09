@@ -2,9 +2,9 @@
     include("templates/UserTemplates.php");
     include("data/UserDataProvider.php");
 
-    function HtmlUserDropdown(){
-        $users = GetAllUsers();
-        $html = UserDropdown($users);
+    function HtmlSellerDropdown(){
+        $users = GetAllSellers();
+        $html = SellerDropdown($users);
         return $html;
     }
 

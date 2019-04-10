@@ -20,6 +20,18 @@
         }
     }
 
+    function GetUserCompleteName(){
+        session_start();
+        $userID = $_SESSION['UserID'];
+        if (!($userID)){
+            return "Error al Buscar Usuario";
+        }
+
+        $user = GetUserById($userID);
+        $name = $user['Name']." ".$user['Lastname'];
+        return $name;
+    }
+
     function CheckSession(){
         session_start();
         $userID = $_SESSION['UserID'];

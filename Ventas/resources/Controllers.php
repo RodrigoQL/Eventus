@@ -20,6 +20,9 @@
             case "CheckSession":
                 echo CheckSession();
                 return;
+            case "GetUserCompleteName":
+                echo GetUserCompleteName();
+                return;
             case "CreateSale":
                 echo CreateSale($_POST['clientfirstname'], $_POST['clientlastname'], $_POST['company'], $_POST['amount'], $_POST['payday'], $_POST['producttypeid'], $_POST['billnumber']);
                 return;

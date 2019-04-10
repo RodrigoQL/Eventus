@@ -16,4 +16,14 @@
 			return $userArray[0];
 		}
 	}
+
+	function GetUserById($userId){
+		global $selectUserColumns;
+		$sql = "SELECT ".$selectUserColumns." FROM User WHERE ID = ".$userId.";";
+		$userArray = SqlSelect($sql);
+		$rowCount = count( $userArray );
+		if( $rowCount > 0 ){
+			return $userArray[0];
+		}
+	}
 ?>

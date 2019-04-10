@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="jquery.dataTables.min.css">
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery.dataTables.min.js"></script>
 </head>
 
 <body>
@@ -33,6 +36,25 @@
     <input type="date"> al <input type="date"><br>
     <button type="button" id="submitButton" class="btn btn-primary">Aceptar</button>
 
+    <table id="myTable">
+        <thead>
+            <tr>
+                <th>Column 1</th>
+                <th>Column 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Isaac</td>
+                <td>Te</td>
+            </tr>
+            <tr>
+                <td>amo</td>
+                <td>corazon</td>
+            </tr>
+        </tbody>
+    </table>
+
     <script>
         $('#submitButton').click(function(){
             var product = $('#selectedProduct').val();  
@@ -46,6 +68,11 @@
                 $("#comissions").prepend(data);
             });  
         })
+
+
+        $(document).ready( function () {
+        $('#myTable').DataTable();
+    } );
     </script>
 </body>
 

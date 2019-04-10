@@ -1,0 +1,14 @@
+<html>
+
+<body>
+    <!-- footer area start-->
+    <footer>
+        <div class="footer-area">
+            <p>© Equipo 1</p>
+        </div>
+    </footer>
+    <!-- footer area end-->
+
+    <body>
+        
+</html>

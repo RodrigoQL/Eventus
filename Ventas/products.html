@@ -94,8 +94,8 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Administrador</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="manager_header.html">Home</a></li>
-                                <li><span>Form</span></li>
+                                <li><a href="manager.php">Home</a></li>
+                                <li><span>Productos</span></li>
                             </ul>
                         </div>
                     </div>
@@ -113,122 +113,125 @@
                 </div>
             </div>
             <!-- page title area end -->
-        <!-- main content area start -->
-        <div class="container">
-        <fieldset>
-            <legend>Agregar linea de Producto</legend>
-            <div>
-                <label for="product_name">Nombre:</label>
-                <input name="product_name" id="productname" type="text" placeholder="Linea de Producto" required
-                    autofocus>
+            <!-- main content area start -->
+            <div class="main-content-inner">
+                <div class="card-body">
+                    <fieldset>
+                        <legend>Agregar linea de Producto</legend>
+                        <div>
+                            <label for="product_name">Nombre:</label>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="product_name"
+                                id="productname" type="text" placeholder="Linea de Producto" required autofocus>
+                        </div>
+                        <div>
+                            <label for="comission">Comisión:</label>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="comission"
+                                id="comission" type="number" placeholder="Comisión" required>
+                        </div>
+                        <div>
+                            <input class="btn btn-secondary btn-lg btn-block" name="submit" id="submitButton"
+                                type="submit" value="Agregar Linea de Producto">
+                        </div>
+                    </fieldset>
+                </div>
+                <div id="productstable">
+                </div>
             </div>
-            <div>
-                <label for="comission">Comisión:</label>
-                <input name="comission" id="comission" type="number" placeholder="Comisión" required>
-            </div>
-            <div>
-                <input class="btn btn-default" name="submit" id="submitButton" type="submit"
-                    value="Agregar Linea de Producto">
-            </div>
-        </fieldset>
-    </div>
-    <div id="productstable">
-    </div>
-        <!-- main content area end -->
-    </div>
-    <!-- page container area end -->
-    <!-- offset area start -->
-
-    <!-- offset area end -->
-    <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
-
-    <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <!-- footer area start-->
-    <footer>
-        <div class="footer-area">
-            <p>© Equipo 1</p>
+            <!-- main content area end -->
         </div>
-    </footer>
-    <!-- footer area end-->
+        <!-- page container area end -->
+        <!-- offset area start -->
 
-    <script>
-    window.onload = function() {
-        checkSession();
-        setUserValues();
-		getProducts();
-    };
-    $('#logoutButton').click(function() {
-        $.post("resources/Controllers.php", {
-                function: "Logout",
-            },
+        <!-- offset area end -->
+        <!-- jquery latest version -->
+        <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+        <!-- bootstrap 4 js -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/metisMenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
 
-            function(data) {
-                window.location.href = "index.html";
+        <!-- others plugins -->
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Equipo 1</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
+
+        <script>
+            window.onload = function () {
+                checkSession();
+                setUserValues();
+                getProducts();
+            };
+            $('#logoutButton').click(function () {
+                $.post("resources/Controllers.php", {
+                    function: "Logout",
+                },
+
+                    function (data) {
+                        window.location.href = "index.html";
+                    });
+
             });
 
-    });
-	
-	function getProducts(){
-        $.post("resources/Controllers.php", 
-        {
-            function: "ProductsTable",
-        },
-        
-        function(data){
-            $("#productstable").prepend(data);
-        });
-        }
+            function getProducts() {
+                $.post("resources/Controllers.php",
+                    {
+                        function: "ProductsTable",
+                    },
 
-    function setUserValues() {
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1;
-        var yyyy = today.getFullYear();
+                    function (data) {
+                        $("#productstable").prepend(data);
+                    });
+            }
 
-        if (dd < 10) {
-            dd = '0' + dd;
-        }
+            function setUserValues() {
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth() + 1;
+                var yyyy = today.getFullYear();
 
-        if (mm < 10) {
-            mm = '0' + mm;
-        }
-
-        today = mm + '/' + dd + '/' + yyyy;
-        $.post("resources/Controllers.php", {
-                function: "GetUserCompleteName",
-            },
-
-            function(data) {
-                $('#user_name').html(data);
-                $('#current_date').html(today);
-            });
-    }
-
-    function checkSession() {
-        $.post("resources/Controllers.php", {
-                function: "CheckSession",
-            },
-
-            function(data) {
-                var typeId = parseInt(data);
-                if (typeId != 1) {
-                    window.location.href = "index.html";
+                if (dd < 10) {
+                    dd = '0' + dd;
                 }
-            });
-    }
-	
 
-    </script>
+                if (mm < 10) {
+                    mm = '0' + mm;
+                }
+
+                today = mm + '/' + dd + '/' + yyyy;
+                $.post("resources/Controllers.php", {
+                    function: "GetUserCompleteName",
+                },
+
+                    function (data) {
+                        $('#user_name').html(data);
+                        $('#current_date').html(today);
+                    });
+            }
+
+            function checkSession() {
+                $.post("resources/Controllers.php", {
+                    function: "CheckSession",
+                },
+
+                    function (data) {
+                        var typeId = parseInt(data);
+                        if (typeId != 1) {
+                            window.location.href = "index.html";
+                        }
+                    });
+            }
+
+
+        </script>
 
 
 </body>

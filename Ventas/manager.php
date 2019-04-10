@@ -48,9 +48,9 @@
                             <ul class="metismenu" id="menu">
 
                                 <li><a href="manager_sales.html" aria-expanded="false"><span>Ventas</span></a></li>
-                                <li><a href="manager_comissions.html" aria-expanded="false"><span>Comisiones</span></a>
+                                <li><a href="manager_comissions.php" aria-expanded="false"><span>Comisiones</span></a>
                                 </li>
-                                <li><a href="#" aria-expanded="false"> <span>Admin</span></a></li>
+                                <li><a href="products.html" aria-expanded="false"> <span>Admin</span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -81,7 +81,7 @@
                     <!-- profile info & task notification -->
                     <div class="col-md-6 col-sm-4 clearfix">
                         <div class="notification-area pull-right">
-                            <p id="current_date" style="color: black; ">04/10/2019</p>
+                            <p id="current_date" style="color: black; ">xx/xx/xxxx</p>
                         </div>
                     </div>
                 </div>
@@ -94,8 +94,8 @@
                         <div class="breadcrumbs-area clearfix">
                             <h4 class="page-title pull-left">Administrador</h4>
                             <ul class="breadcrumbs pull-left">
-                                <li><a href="manager_header.html">Home</a></li>
-                                <li><span>Form</span></li>
+                                <li><a href="manager.php">Home</a></li>
+                                <li><span></span></li>
                             </ul>
                         </div>
                     </div>

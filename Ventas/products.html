@@ -13,59 +13,67 @@
 </head>
 
 <body>
-        <form action="manager_comissions.html">
-                <input type="submit" value="Comisiones" />
-            </form>
-            <form action="manager_sales.html">
-                    <input type="submit" value="Ventas" />
-            </form>
-            <form action="products.html">
-                    <input type="submit" value="Lineas de Producto" />
-            </form>
-    <div class="row" id="navebar">
-        <div class="col-sm-4">Sistema de Ventas - Administrador</div>
-        <div class="col-sm-4">
-            <input style="color:black" id="user_name" type="text" readonly value="...">
-        </div>
-        <div class="col-sm-4">
-            <input style="color:black" id="current_date" type="text" readonly value="...">
-        </div>
-    </div>
+    <form action="manager.html">
+        <input type="submit" value="Inicio" />
+    </form>
+    <form action="manager_comissions.html">
+        <input type="submit" value="Comisiones" />
+    </form>
+    <form action="manager_sales.html">
+        <input type="submit" value="Ventas" />
+    </form>
     <div id="section_1">
         <div class="container">
-            <div class="d-flex justify-content-sm-center bg-warning mb-5">
-                <div align="center" class="col-sm-4">
-                    <button class="btn btn-primary">Ventas</button>
+            <fieldset>
+                <legend>Agregar linea de Producto</legend>
+                <div>
+                    <label for="product_name">Nombre:</label>
+                    <input name="product_name" id="productname" type="text" placeholder="Linea de Producto" required autofocus>
                 </div>
-                <div align="center" class="col-sm-4">
-                    <button type="button" class="btn btn-primary">Comisiones</button>
+                <div>
+                    <label for="comission">Comisión:</label>
+                    <input name="comission" id="comission" type="number" placeholder="Comisión" required>
                 </div>
-                <div align="center" class="col-sm-4">
-                    <button type="button" class="btn btn-primary">Admin</button>
+                <div>
+                    <input class="btn btn-default" name="submit" id="submitButton" type="submit" value ="Agregar Linea de Producto">
                 </div>
-                <br><br>
-                <div align="center">
-                    <button id="logoutButton" class="btn btn-danger">Salir</button>
-                </div>
-            </div>
+            </fieldset>
+        </div>
+        <div id="productstable">
+
         </div>
     <script>
         window.onload = function () {
             checkSession();
             setUserValues();
+            getProducts();
         };
-        $('#logoutButton').click(function () {
+        $('#submitButton').click(function () {
+            var comission = $('#comission').val();
+            var name = $('#productname').val();
             $.post("resources/Controllers.php",
                 {
-                    function: "Logout",
+                    function: "CreateProductType",
+                    name: name,
+                    comission: comission
                 },
 
                 function (data) {
-                    window.location.href = "index.html";
+                    window.location.href = "products.html";
                 });
 
         });
 
+        function getProducts(){
+        $.post("resources/Controllers.php", 
+        {
+            function: "ProductsTable",
+        },
+        
+        function(data){
+            $("#productstable").prepend(data);
+        });
+        }
         function setUserValues() {
             var today = new Date();
             var dd = today.getDate();

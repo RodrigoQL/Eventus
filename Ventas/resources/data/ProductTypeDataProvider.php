@@ -12,4 +12,9 @@
 		$sql = "SELECT ".$selectProductTypeColumns." FROM ProductType WHERE ID = ".$id.";";
 		return SqlSelect($sql);
 	}
+
+	function InsertProductType($name, $comission){
+		$sql = "INSERT INTO ProductType (Name, Comission) VALUES ('".$name."', ".$comission.");";
+		return SqlInsert($sql);
+	}
 ?>

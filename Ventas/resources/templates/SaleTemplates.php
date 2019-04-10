@@ -8,4 +8,18 @@
         $html .= '</select>';
         return $html;
     }
+
+    function ProductsTable($products){
+        $html = '<table class="table"> <tr> <th> Nombre </th> <th> Comisión </th> </tr>';
+
+		foreach($products as $row) {
+			$html .= "<tr> <td>";
+			$html .= $row['Name'];
+			$html .= "</td> <td>";
+			$html .= $row['Comission'];
+			$html .= "</td> </tr>";
+		}
+		$html .= "</table>";
+		return $html;
+    }
 ?>

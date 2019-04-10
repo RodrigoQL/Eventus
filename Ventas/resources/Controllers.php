@@ -26,6 +26,12 @@
             case "CreateSale":
                 echo CreateSale($_POST['clientfirstname'], $_POST['clientlastname'], $_POST['company'], $_POST['amount'], $_POST['payday'], $_POST['producttypeid'], $_POST['billnumber']);
                 return;
+            case "ProductsTable":
+                echo HtmlProductsTable();
+                return;
+            case "CreateProductType":
+                echo CreateProductType($_POST['name'], $_POST['comission']);
+                return;
         }
     }
     

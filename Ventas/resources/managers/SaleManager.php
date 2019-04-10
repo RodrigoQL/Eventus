@@ -14,4 +14,14 @@
         InsertSale($userID, $clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber);
         return "Venta Creada";
     }
+
+    function HtmlProductsTable(){
+        $products = GetAllProductTypes();
+        $html = ProductsTable($products);
+        return $html;
+    }
+
+    function CreateProductType($name, $comission){
+        return InsertProductType($name, $comission);
+    }
 ?>

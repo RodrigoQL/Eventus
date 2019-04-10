@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Form - srtdash</title>
+    <title>Sistema - Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -50,7 +50,8 @@
                                 <li><a href="manager_sales.html" aria-expanded="false"><span>Ventas</span></a></li>
                                 <li><a href="manager_comissions.php" aria-expanded="false"><span>Comisiones</span></a>
                                 </li>
-                                <li><a href="products.html" aria-expanded="false"> <span>Admin</span></a></li>
+                                <li><a href="products.html" aria-expanded="false"> <span>Línea de Productos</span></a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -128,7 +129,7 @@
                     </div>
                     <div class="col-4">
                         <form action="products.html">
-                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Productos" />
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Línea de Productos" />
                         </form>
                     </div>
                 </div>
@@ -137,86 +138,85 @@
 
 
         <!-- main content area end -->
-    </div>
-    <!-- page container area end -->
-    <!-- offset area start -->
+        <!-- page container area end -->
+        <!-- offset area start -->
 
-    <!-- offset area end -->
-    <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+        <!-- offset area end -->
+        <!-- jquery latest version -->
+        <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+        <!-- bootstrap 4 js -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/metisMenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <!-- footer area start-->
-    <footer>
-        <div class="footer-area">
-            <p>© Equipo 1</p>
-        </div>
-    </footer>
-    <!-- footer area end-->
+        <!-- others plugins -->
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Equipo 1 - Rodrigo Quiroz, Jorge Ramírez, Luis García</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
 
-    <script>
-    window.onload = function() {
-        checkSession();
-        setUserValues();
-    };
-    $('#logoutButton').click(function() {
-        $.post("resources/Controllers.php", {
-                function: "Logout",
-            },
+        <script>
+        window.onload = function() {
+            checkSession();
+            setUserValues();
+        };
+        $('#logoutButton').click(function() {
+            $.post("resources/Controllers.php", {
+                    function: "Logout",
+                },
 
-            function(data) {
-                window.location.href = "index.html";
-            });
-
-    });
-
-    function setUserValues() {
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1;
-        var yyyy = today.getFullYear();
-
-        if (dd < 10) {
-            dd = '0' + dd;
-        }
-
-        if (mm < 10) {
-            mm = '0' + mm;
-        }
-
-        today = mm + '/' + dd + '/' + yyyy;
-        $.post("resources/Controllers.php", {
-                function: "GetUserCompleteName",
-            },
-
-            function(data) {
-                $('#user_name').html(data);
-                $('#current_date').html(today);
-            });
-    }
-
-    function checkSession() {
-        $.post("resources/Controllers.php", {
-                function: "CheckSession",
-            },
-
-            function(data) {
-                var typeId = parseInt(data);
-                if (typeId != 1) {
+                function(data) {
                     window.location.href = "index.html";
-                }
-            });
-    }
-    </script>
+                });
+
+        });
+
+        function setUserValues() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1;
+            var yyyy = today.getFullYear();
+
+            if (dd < 10) {
+                dd = '0' + dd;
+            }
+
+            if (mm < 10) {
+                mm = '0' + mm;
+            }
+
+            today = mm + '/' + dd + '/' + yyyy;
+            $.post("resources/Controllers.php", {
+                    function: "GetUserCompleteName",
+                },
+
+                function(data) {
+                    $('#user_name').html(data);
+                    $('#current_date').html(today);
+                });
+        }
+
+        function checkSession() {
+            $.post("resources/Controllers.php", {
+                    function: "CheckSession",
+                },
+
+                function(data) {
+                    var typeId = parseInt(data);
+                    if (typeId != 1) {
+                        window.location.href = "index.html";
+                    }
+                });
+        }
+        </script>
 
 
 </body>

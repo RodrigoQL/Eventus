@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Form - srtdash</title>
+    <title>Sistema - Vendedor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -112,8 +112,8 @@
                 </div>
             </div>
             <!-- page title area end -->
-        <!-- main content area start -->
-        <div class="main-content-inner">
+            <!-- main content area start -->
+            <div class="main-content-inner">
                 <div class="row" style="padding-top: 20%;">
                     <div class="col-6">
                         <form action="new_sale.html">
@@ -121,7 +121,7 @@
                         </form>
                     </div>
                     <div class="col-6">
-                    <form action="seller_comissions.html">
+                        <form action="seller_comissions.html">
                             <input type="submit" class="btn btn-primary btn-lg btn-block" value="Comisiones" />
                         </form>
                     </div>
@@ -129,88 +129,88 @@
             </div>
         </div>
         <!-- main content area end -->
-    </div>
-    <!-- page container area end -->
-    <!-- offset area start -->
 
-    <!-- offset area end -->
-    <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+        <!-- page container area end -->
+        <!-- offset area start -->
 
-    <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <!-- footer area start-->
-    <footer>
-        <div class="footer-area">
-            <p>© Equipo 1</p>
-        </div>
-    </footer>
-    <!-- footer area end-->
+        <!-- offset area end -->
+        <!-- jquery latest version -->
+        <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+        <!-- bootstrap 4 js -->
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/metisMenu.min.js"></script>
+        <script src="assets/js/jquery.slimscroll.min.js"></script>
+        <script src="assets/js/jquery.slicknav.min.js"></script>
 
-    <script>
-    window.onload = function() {
-        checkSession();
-        setUserValues();
-    };
+        <!-- others plugins -->
+        <script src="assets/js/plugins.js"></script>
+        <script src="assets/js/scripts.js"></script>
+        <!-- footer area start-->
+        <footer>
+            <div class="footer-area">
+                <p>© Equipo 1 - Rodrigo Quiroz, Jorge Ramírez, Luis García</p>
+            </div>
+        </footer>
+        <!-- footer area end-->
 
-    $('#logoutButton').click(function() {
-        $.post("resources/Controllers.php", {
-                function: "Logout",
-            },
+        <script>
+            window.onload = function () {
+                checkSession();
+                setUserValues();
+            };
 
-            function(data) {
-                window.location.href = "index.html";
+            $('#logoutButton').click(function () {
+                $.post("resources/Controllers.php", {
+                    function: "Logout",
+                },
+
+                    function (data) {
+                        window.location.href = "index.html";
+                    });
+
             });
 
-    });
+            function setUserValues() {
+                var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth() + 1;
+                var yyyy = today.getFullYear();
 
-    function setUserValues() {
-        var today = new Date();
-        var dd = today.getDate();
-        var mm = today.getMonth() + 1;
-        var yyyy = today.getFullYear();
-
-        if (dd < 10) {
-            dd = '0' + dd;
-        }
-
-        if (mm < 10) {
-            mm = '0' + mm;
-        }
-
-        today = mm + '/' + dd + '/' + yyyy;
-        $.post("resources/Controllers.php", {
-                function: "GetUserCompleteName",
-            },
-
-            function(data) {
-                $('#user_name').html(data);
-                $('#current_date').html(today);
-            });
-    }
-
-    function checkSession() {
-        $.post("resources/Controllers.php", {
-                function: "CheckSession",
-            },
-
-            function(data) {
-                var typeId = parseInt(data);
-                if (typeId != 2) {
-                    window.location.href = "index.html";
+                if (dd < 10) {
+                    dd = '0' + dd;
                 }
-            });
-    }
-    
-    </script>
+
+                if (mm < 10) {
+                    mm = '0' + mm;
+                }
+
+                today = mm + '/' + dd + '/' + yyyy;
+                $.post("resources/Controllers.php", {
+                    function: "GetUserCompleteName",
+                },
+
+                    function (data) {
+                        $('#user_name').html(data);
+                        $('#current_date').html(today);
+                    });
+            }
+
+            function checkSession() {
+                $.post("resources/Controllers.php", {
+                    function: "CheckSession",
+                },
+
+                    function (data) {
+                        var typeId = parseInt(data);
+                        if (typeId != 2) {
+                            window.location.href = "index.html";
+                        }
+                    });
+            }
+
+        </script>
 
 
 </body>

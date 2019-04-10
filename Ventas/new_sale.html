@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Form - srtdash</title>
+    <title>Sistema - Nueva Venta</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -122,26 +122,28 @@
                         <legend>Ingresar Datos</legend>
                         <div>
                             <label for="client-firstname">Nombre Cliente:</label>
-                            <input class="form-control form-control-lg input-rounded mb-4" name="client-firstname" id="clientfirstname" type="text"
-                                placeholder="Nombre del cliente" required autofocus>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="client-firstname"
+                                id="clientfirstname" type="text" placeholder="Nombre del cliente" required autofocus>
                         </div>
                         <div>
                             <label for="client-lastname">Apellido Cliente:</label>
-                            <input class="form-control form-control-lg input-rounded mb-4" name="client-lastname" id="clientlastname" type="text"
-                                placeholder="Apellido del cliente" required autofocus>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="client-lastname"
+                                id="clientlastname" type="text" placeholder="Apellido del cliente" required autofocus>
                         </div>
                         <div>
                             <label for="company">Empresa:</label>
-                            <input class="form-control form-control-lg input-rounded mb-4" name="company" id="company" type="text" placeholder="Nombre de la empresa" required
-                                autofocus>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="company" id="company"
+                                type="text" placeholder="Nombre de la empresa" required autofocus>
                         </div>
                         <div>
                             <label for="gross-amount">Monto Bruto:</label>
-                            <input class="form-control form-control-lg input-rounded mb-4" name="gross-amount" id="amount" type="number" required autofocus>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="gross-amount"
+                                id="amount" type="number" required autofocus>
                         </div>
                         <div>
                             <label for="payment-date">Fecha de pago:</label>
-                            <input class="form-control form-control-lg input-rounded mb-4" name="payment-date" id="payday" type="date" required autofocus>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="payment-date"
+                                id="payday" type="date" required autofocus>
                         </div>
                         <div id="productcontainer">
                             <label for="product-line">Linea de producto:</label>
@@ -149,127 +151,129 @@
                         </div>
                         <div>
                             <label for="invoice-number">Factura:</label>
-                            <input class="form-control form-control-lg input-rounded mb-4" name="invoice-number" id="billnumber" type="text" required autofocus>
+                            <input class="form-control form-control-lg input-rounded mb-4" name="invoice-number"
+                                id="billnumber" type="text" required autofocus>
                         </div>
                         <div>
-                            <input class="btn btn-secondary btn-lg btn-block" name="submit" id="submitButton" type="submit"
-                                value="Ingresar venta">
+                            <input class="btn btn-secondary btn-lg btn-block" name="submit" id="submitButton"
+                                type="submit" value="Ingresar venta">
                         </div>
                     </fieldset>
                 </div>
             </div>
             <!-- main content area end -->
-        </div>
-    </div>
-    <!-- page container area end -->
-    <!-- offset area start -->
 
-    <!-- offset area end -->
-    <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-    <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+            <!-- page container area end -->
+            <!-- offset area start -->
 
-    <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
-    <!-- footer area start-->
-    <div class="footer-area">
-        <p>© Copyright 2018. All right reserved. Template by <a href="https://colorlib.com/wp/">Colorlib</a>.</p>
-    </div>
-    <!-- footer area end-->
+            <!-- offset area end -->
+            <!-- jquery latest version -->
+            <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+            <!-- bootstrap 4 js -->
+            <script src="assets/js/popper.min.js"></script>
+            <script src="assets/js/bootstrap.min.js"></script>
+            <script src="assets/js/owl.carousel.min.js"></script>
+            <script src="assets/js/metisMenu.min.js"></script>
+            <script src="assets/js/jquery.slimscroll.min.js"></script>
+            <script src="assets/js/jquery.slicknav.min.js"></script>
 
-    <script>
+            <!-- others plugins -->
+            <script src="assets/js/plugins.js"></script>
+            <script src="assets/js/scripts.js"></script>
+            <!-- footer area start-->
+            <footer>
+                <div class="footer-area">
+                    <p>© Equipo 1 - Rodrigo Quiroz, Jorge Ramírez, Luis García</p>
+                </div>
+            </footer>
+            <!-- footer area end-->
 
-        window.onload = function () {
-            getProducts();
-            checkSession();
-            setUserValues();
-        }
+            <script>
 
-        function checkSession() {
-            $.post("resources/Controllers.php",
-                {
-                    function: "CheckSession",
-                },
+                window.onload = function () {
+                    getProducts();
+                    checkSession();
+                    setUserValues();
+                }
 
-                function (data) {
-                    var typeId = parseInt(data);
-                    if (typeId != 2) {
-                        window.location.href = "index.html";
+                function checkSession() {
+                    $.post("resources/Controllers.php",
+                        {
+                            function: "CheckSession",
+                        },
+
+                        function (data) {
+                            var typeId = parseInt(data);
+                            if (typeId != 2) {
+                                window.location.href = "index.html";
+                            }
+                        });
+                }
+
+                function setUserValues() {
+                    var today = new Date();
+                    var dd = today.getDate();
+                    var mm = today.getMonth() + 1;
+                    var yyyy = today.getFullYear();
+
+                    if (dd < 10) {
+                        dd = '0' + dd;
                     }
-                });
-        }
 
-        function setUserValues() {
-            var today = new Date();
-            var dd = today.getDate();
-            var mm = today.getMonth() + 1;
-            var yyyy = today.getFullYear();
+                    if (mm < 10) {
+                        mm = '0' + mm;
+                    }
 
-            if (dd < 10) {
-                dd = '0' + dd;
-            }
+                    today = mm + '/' + dd + '/' + yyyy;
+                    $.post("resources/Controllers.php", {
+                        function: "GetUserCompleteName",
+                    },
 
-            if (mm < 10) {
-                mm = '0' + mm;
-            }
-
-            today = mm + '/' + dd + '/' + yyyy;
-            $.post("resources/Controllers.php", {
-                function: "GetUserCompleteName",
-            },
-
-                function (data) {
-                    $('#user_name').html(data);
-                    $('#current_date').html(today);
-                });
-        }
+                        function (data) {
+                            $('#user_name').html(data);
+                            $('#current_date').html(today);
+                        });
+                }
 
 
-        $('#submitButton').click(function () {
-            var clientfirstname = $('#clientfirstname').val();
-            var clientlastname = $('#clientlastname').val();
-            var company = $('#company').val();
-            var amount = $('#amount').val();
-            var payday = $('#payday').val();
-            var product = $('#selectedProduct').val();
-            var billnumber = $('#billnumber').val();
+                $('#submitButton').click(function () {
+                    var clientfirstname = $('#clientfirstname').val();
+                    var clientlastname = $('#clientlastname').val();
+                    var company = $('#company').val();
+                    var amount = $('#amount').val();
+                    var payday = $('#payday').val();
+                    var product = $('#selectedProduct').val();
+                    var billnumber = $('#billnumber').val();
 
-            $.post("resources/Controllers.php",
-                {
-                    function: "CreateSale",
-                    clientfirstname: clientfirstname,
-                    clientlastname: clientlastname,
-                    company: company,
-                    amount: amount,
-                    payday: payday,
-                    billnumber: billnumber,
-                    producttypeid: product
-                },
+                    $.post("resources/Controllers.php",
+                        {
+                            function: "CreateSale",
+                            clientfirstname: clientfirstname,
+                            clientlastname: clientlastname,
+                            company: company,
+                            amount: amount,
+                            payday: payday,
+                            billnumber: billnumber,
+                            producttypeid: product
+                        },
 
-                function (data) {
-                    alert(data);
-                });
+                        function (data) {
+                            alert(data);
+                        });
 
-        })
+                })
 
-        function getProducts() {
-            $.post("resources/Controllers.php",
-                {
-                    function: "ProductsDropdown",
-                },
+                function getProducts() {
+                    $.post("resources/Controllers.php",
+                        {
+                            function: "ProductsDropdown",
+                        },
 
-                function (data) {
-                    $("#productcontainer").prepend(data);
-                });
-        }
-    </script>
+                        function (data) {
+                            $("#productcontainer").prepend(data);
+                        });
+                }
+            </script>
 </body>
 
 </html>

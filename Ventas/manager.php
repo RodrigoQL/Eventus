@@ -113,21 +113,21 @@
                 </div>
             </div>
             <!-- page title area end -->
-        <!-- main content area start -->
-        <div class="main-content-inner">
-                <div class="row">
+            <!-- main content area start -->
+            <div class="main-content-inner">
+                <div class="row" style="padding-top: 20%;">
                     <div class="col-4">
                         <form action="manager_sales.html">
                             <input type="submit" class="btn btn-primary btn-lg btn-block" value="Ventas" />
                         </form>
                     </div>
                     <div class="col-4">
-                    <form action="manager_comissions.php">
+                        <form action="manager_comissions.php">
                             <input type="submit" class="btn btn-primary btn-lg btn-block" value="Comisiones" />
                         </form>
                     </div>
                     <div class="col-4">
-                    <form action="products.html">
+                        <form action="products.html">
                             <input type="submit" class="btn btn-primary btn-lg btn-block" value="Productos" />
                         </form>
                     </div>

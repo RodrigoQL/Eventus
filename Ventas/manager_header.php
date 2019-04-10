@@ -1,5 +1,5 @@
 <html
-    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
     lang="en" style="">
 
 <head>
@@ -25,7 +25,7 @@
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
-<body>
+<body cz-shortcut-listen="true">
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -42,20 +42,20 @@
                 </div>
             </div>
             <div class="main-menu">
-                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 643px;">
-                    <div class="menu-inner" style="overflow: hidden; width: auto; height: 643px;">
+                <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 611px;">
+                    <div class="menu-inner" style="overflow: hidden; width: auto; height: 611px;">
                         <nav>
                             <ul class="metismenu" id="menu">
 
                                 <li><a href="manager_sales.html" aria-expanded="false"><span>Ventas</span></a></li>
-                                <li><a href="manager_comissions.html"
-                                        aria-expanded="false"></i><span>Comisiones</span></a></li>
-                                <li><a href="products.html" aria-expanded="false"></i> <span>Admin</span></a></li>
+                                <li><a href="manager_comissions.html" aria-expanded="false"><span>Comisiones</span></a>
+                                </li>
+                                <li><a href="#" aria-expanded="false"> <span>Admin</span></a></li>
                             </ul>
                         </nav>
                     </div>
                     <div class="slimScrollBar"
-                        style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 643px;">
+                        style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: -32px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 611px;">
                     </div>
                     <div class="slimScrollRail"
                         style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
@@ -65,7 +65,7 @@
         </div>
         <!-- sidebar menu area end -->
         <!-- main content area start -->
-        <div class="main-content" style="min-height: 691px;">
+        <div class="main-content" style="min-height: 659px;">
             <!-- header area start -->
             <div class="header-area">
                 <div class="row align-items-center">
@@ -79,11 +79,11 @@
 
                     </div>
                     <!-- profile info & task notification -->
-                <div class="col-md-6 col-sm-4 clearfix">
-                    <div class="notification-area pull-right">
-                    <p id="current_date" style="color: black; "></p>
+                    <div class="col-md-6 col-sm-4 clearfix">
+                        <div class="notification-area pull-right">
+                            <p id="current_date" style="color: black; ">04/10/2019</p>
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
             <!-- header area end -->
@@ -103,7 +103,7 @@
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
                             <h4 id="user_name" class="user-name dropdown-toggle" data-toggle="dropdown"
-                                aria-expanded="false"><i class="fa fa-angle-down"></i></h4>
+                                aria-expanded="false">...</h4>
                             <div class="dropdown-menu" x-placement="bottom-start"
                                 style="position: absolute; transform: translate3d(64px, 45px, 0px); top: 0px; left: 0px; will-change: transform;">
                                 <a id="logoutButton" class="dropdown-item" href="#">Log Out</a>
@@ -113,9 +113,28 @@
                 </div>
             </div>
             <!-- page title area end -->
-
-        </div>
         <!-- main content area start -->
+        <div class="container">
+        <fieldset>
+            <legend>Agregar linea de Producto</legend>
+            <div>
+                <label for="product_name">Nombre:</label>
+                <input name="product_name" id="productname" type="text" placeholder="Linea de Producto" required
+                    autofocus>
+            </div>
+            <div>
+                <label for="comission">Comisión:</label>
+                <input name="comission" id="comission" type="number" placeholder="Comisión" required>
+            </div>
+            <div>
+                <input class="btn btn-default" name="submit" id="submitButton" type="submit"
+                    value="Agregar Linea de Producto">
+            </div>
+        </fieldset>
+    </div>
+    <div id="productstable">
+    </div>
+
 
         <!-- main content area end -->
     </div>
@@ -198,6 +217,8 @@
             });
     }
     </script>
+
+
 </body>
 
 </html>

@@ -1,4 +1,8 @@
-<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths" lang="en" style=""><head>
+<html
+    class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface no-generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+    lang="en" style="">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Form - srtdash</title>
@@ -44,14 +48,17 @@
                             <ul class="metismenu" id="menu">
 
                                 <li><a href="manager_sales.html" aria-expanded="false"><span>Ventas</span></a></li>
-                                <li><a href="manager_comissions.html" aria-expanded="false"><span>Comisiones</span></a></li>
+                                <li><a href="manager_comissions.html" aria-expanded="false"><span>Comisiones</span></a>
+                                </li>
                                 <li><a href="#" aria-expanded="false"> <span>Admin</span></a></li>
                             </ul>
                         </nav>
                     </div>
-                    <div class="slimScrollBar" style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: -32px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 611px;">
+                    <div class="slimScrollBar"
+                        style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: -32px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 611px;">
                     </div>
-                    <div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                    <div class="slimScrollRail"
+                        style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
                     </div>
                 </div>
             </div>
@@ -95,8 +102,10 @@
                     <div class="col-sm-6 clearfix">
                         <div class="user-profile pull-right">
                             <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                            <h4 id="user_name" class="user-name dropdown-toggle" data-toggle="dropdown" aria-expanded="false">...</h4>
-                            <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; transform: translate3d(64px, 45px, 0px); top: 0px; left: 0px; will-change: transform;">
+                            <h4 id="user_name" class="user-name dropdown-toggle" data-toggle="dropdown"
+                                aria-expanded="false">...</h4>
+                            <div class="dropdown-menu" x-placement="bottom-start"
+                                style="position: absolute; transform: translate3d(64px, 45px, 0px); top: 0px; left: 0px; will-change: transform;">
                                 <a id="logoutButton" class="dropdown-item" href="#">Log Out</a>
                             </div>
                         </div>
@@ -104,24 +113,29 @@
                 </div>
             </div>
             <!-- page title area end -->
-<div class="main-content-inner">
+        <!-- main content area start -->
+        <div class="main-content-inner">
                 <div class="row">
                     <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                        <form action="manager_sales.html">
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Ventas" />
+                        </form>
                     </div>
                     <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                    <form action="manager_comissions.php">
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Comisiones" />
+                        </form>
                     </div>
                     <div class="col-4">
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                    <form action="products.html">
+                            <input type="submit" class="btn btn-primary btn-lg btn-block" value="Productos" />
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- main content area start -->
-        
-            
-        
+
+
         <!-- main content area end -->
     </div>
     <!-- page container area end -->
@@ -205,4 +219,6 @@
     </script>
 
 
-</body></html>
+</body>
+
+</html>

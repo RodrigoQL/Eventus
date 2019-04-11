@@ -197,7 +197,7 @@
                 }
 
                 function checkSession() {
-                    $.post("resources/Controllers.php",
+                    $.post("Controllers.php",
                         {
                             function: "CheckSession",
                         },
@@ -225,7 +225,7 @@
                     }
 
                     today = mm + '/' + dd + '/' + yyyy;
-                    $.post("resources/Controllers.php", {
+                    $.post("Controllers.php", {
                         function: "GetUserCompleteName",
                     },
 
@@ -245,7 +245,7 @@
                     var product = $('#selectedProduct').val();
                     var billnumber = $('#billnumber').val();
 
-                    $.post("resources/Controllers.php",
+                    $.post("Controllers.php",
                         {
                             function: "CreateSale",
                             clientfirstname: clientfirstname,
@@ -264,7 +264,7 @@
                 })
 
                 function getProducts() {
-                    $.post("resources/Controllers.php",
+                    $.post("Controllers.php",
                         {
                             function: "ProductsDropdown",
                         },

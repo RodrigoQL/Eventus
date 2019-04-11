@@ -1,6 +1,7 @@
 <?php
     include("resources/managers/UserManager.php");
     include("resources/managers/SaleManager.php");
+
 	if($_POST['function']){
         $function = $_POST['function'];
         switch ($function) {

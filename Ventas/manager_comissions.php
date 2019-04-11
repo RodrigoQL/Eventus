@@ -216,7 +216,7 @@
             setUserValues();
         };
         $('#logoutButton').click(function() {
-            $.post("resources/Controllers.php", {
+            $.post("Controllers.php", {
                     function: "Logout",
                 },
 

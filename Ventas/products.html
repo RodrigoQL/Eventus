@@ -171,7 +171,7 @@
                 getProducts();
             };
             $('#logoutButton').click(function () {
-                $.post("resources/Controllers.php", {
+                $.post("Controllers.php", {
                     function: "Logout",
                 },
 
@@ -181,8 +181,23 @@
 
             });
 
+            $('#submitButton').click(function () {
+            var comission = $('#comission').val();
+            var name = $('#productname').val();
+            $.post("Controllers.php",
+                {
+                    function: "CreateProductType",
+                    name: name,
+                    comission: comission
+                },
+
+                function (data) {
+                    window.location.href = "products.html";
+                });
+            });
+
             function getProducts() {
-                $.post("resources/Controllers.php",
+                $.post("Controllers.php",
                     {
                         function: "ProductsTable",
                     },
@@ -207,7 +222,7 @@
                 }
 
                 today = mm + '/' + dd + '/' + yyyy;
-                $.post("resources/Controllers.php", {
+                $.post("Controllers.php", {
                     function: "GetUserCompleteName",
                 },
 
@@ -218,7 +233,7 @@
             }
 
             function checkSession() {
-                $.post("resources/Controllers.php", {
+                $.post("Controllers.php", {
                     function: "CheckSession",
                 },
 

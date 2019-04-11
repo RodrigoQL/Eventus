@@ -1,6 +1,6 @@
 <?php
-    include("templates/UserTemplates.php");
-    include("data/UserDataProvider.php");
+    include("resources/templates/UserTemplates.php");
+    include("resources/data/UserDataProvider.php");
 
     function HtmlSellerDropdown(){
         $users = GetAllSellers();
@@ -34,7 +34,7 @@
 
     function CheckSession(){
         session_start();
-        $userID = $_SESSION['UserID'];
+        $userID = $_SESSION['UserTypeID'];
         return $userID;
     }
 

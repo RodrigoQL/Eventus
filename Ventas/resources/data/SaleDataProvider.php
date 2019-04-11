@@ -1,5 +1,4 @@
 <?php
-include("resources/data/DataProvider.php");
 	$insertSaleColumns = "SellerID, ClientName, ClientLastname, ClientCompany, Amount, PayDate, ProductTypeID, BillNumber";
 	$selectSaleColumns = "ID, SellerID, ClientName, ClientLastname, ClientCompany, Amount, PayDate, ProductTypeID, BillNumber, CreatedDate, Payed, Validated";
 
@@ -27,7 +26,7 @@ include("resources/data/DataProvider.php");
 	}
 
 	function GetSellerComissions(){
-    	$sql = "select sum( (t1.Amount * (t2.Comission/100) ) ) as total,t3.Name as vendedor from Sale as t1,ProductType as t2,User as t3 where t1.Validated = 1 and t1.SellerID = t3.id and t1.ProductTypeID = t2.id group by t1.SellerID";
+    	$sql = "select sum( (t1.Amount * (t2.Comission) ) ) as total,t3.Name as vendedor from Sale as t1,ProductType as t2,User as t3 where t1.Validated = 1 and t1.SellerID = t3.id and t1.ProductTypeID = t2.id group by t1.SellerID";
 	    return SqlSelect($sql);
 	}
 ?>

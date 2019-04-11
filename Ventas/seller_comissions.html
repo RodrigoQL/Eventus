@@ -180,7 +180,7 @@
         };
 
         $('#logoutButton').click(function() {
-        $.post("resources/Controllers.php", {
+        $.post("Controllers.php", {
                 function: "Logout",
             },
 
@@ -191,7 +191,7 @@
     });
 
         function checkSession() {
-            $.post("resources/Controllers.php", {
+            $.post("Controllers.php", {
                 function: "CheckSession",
             },
 
@@ -218,7 +218,7 @@
             }
 
             today = mm + '/' + dd + '/' + yyyy;
-            $.post("resources/Controllers.php", {
+            $.post("Controllers.php", {
                 function: "GetUserCompleteName",
             },
 
@@ -231,7 +231,7 @@
         $('#submitButton').click(function () {
             var product = $('#selectedProduct').val();
 
-            $.post("resources/Controllers.php",
+            $.post("Controllers.php",
                 {
                     function: "SellersDropdown",
                 },

@@ -169,7 +169,7 @@
             setUserValues();
         };
         $('#logoutButton').click(function() {
-            $.post("resources/Controllers.php", {
+            $.post("Controllers.php", {
                     function: "Logout",
                 },
 
@@ -194,7 +194,7 @@
             }
 
             today = mm + '/' + dd + '/' + yyyy;
-            $.post("resources/Controllers.php", {
+            $.post("Controllers.php", {
                     function: "GetUserCompleteName",
                 },
 
@@ -205,7 +205,7 @@
         }
 
         function checkSession() {
-            $.post("resources/Controllers.php", {
+            $.post("Controllers.php", {
                     function: "CheckSession",
                 },
 

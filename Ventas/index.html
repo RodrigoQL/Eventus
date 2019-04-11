@@ -39,7 +39,7 @@
         $('#submitButton').click(function () {
             var username = $('#username').val();
             var password = $('#password').val();
-            $.post("resources/Controllers.php",
+            $.post("Controllers.php",
                 {
                     function: "Login",
                     username: username,
@@ -58,7 +58,7 @@
         });
 
         function checkSession() {
-            $.post("resources/Controllers.php",
+            $.post("Controllers.php",
                 {
                     function: "CheckSession",
                 },

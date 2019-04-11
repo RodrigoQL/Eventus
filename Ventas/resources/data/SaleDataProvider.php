@@ -21,7 +21,7 @@
 
 	function GetSellerSales($id, $fromDate, $toDate){
 		global $selectSaleColumns;
-		$sql = "SELECT ".$selectSaleColumns." FROM Sale WHERE ID = ".$id." AND CreatedDate BETWEEN ".$fromDate." AND ".$toDate;
+		$sql = "SELECT ".$selectSaleColumns." FROM Sale WHERE SellerId = ".$id." AND CreatedDate BETWEEN '".$fromDate."' AND '".$toDate."';";
 		return SqlSelect($sql);
 	}
 

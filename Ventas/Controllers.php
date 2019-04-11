@@ -32,6 +32,9 @@
             case "CreateProductType":
                 echo CreateProductType($_POST['name'], $_POST['comission']);
                 return;
+            case "GetSales":
+                echo HtmlSalesTables($_POST['userId'], $_POST['fromDate'], $_POST['toDate']);
+                return;
         }
     }
     

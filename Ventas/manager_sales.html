@@ -117,29 +117,15 @@
             <!-- main content area start -->
             <div class="main-content-inner">
                 <h1>Ventas<h2>
-                        <!-- PHP AQUI -->
-                        <table>
-                            <tr>
-                                <th scope="col">dog</th>
-                                <th scope="col">cat</th>
-                                <th scope="col">horse</th>
-                                <th scope="col">iguana</th>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>2</td>
-                                <td>10</td>
-                                <td>500</td>
-                            </tr>
+                    <div id="user-container">
 
-                        </table>
-                        <!-- /PHP AQUI -->
-                        <p> Filtrar por fecha de ingreso del:</p>
-                        <input type="date"> al <input type="date"><br>
-                        <button type="button" class="btn btn-primary">Aceptar</button>
-                        <p>Filtrar por fecha de pago del:</p>
-                        <input type="date"> al <input type="date"><br>
-                        <button type="button" class="btn btn-primary">Aceptar</button>
+                    </div>
+                    <p> Filtrar por fecha de ingreso del:</p>
+                    <input type="date" id="from-date"> al <input type="date" id="to-date"><br>
+                    <button type="button" class="btn btn-primary" id="submitButton">Aceptar</button>
+                    <div id="table-container">
+                        
+                    </div>
             </div>
         </div>
 
@@ -174,6 +160,7 @@
             window.onload = function () {
                 checkSession();
                 setUserValues();
+                getSellers();
             };
             $('#logoutButton').click(function () {
                 $.post("Controllers.php", {
@@ -183,6 +170,22 @@
                     function (data) {
                         window.location.href = "index.html";
                     });
+
+            });
+
+            $('#submitButton').click(function () {
+                var userId = $('#selectedUser').val();
+                var fromDate = $('#from-date').val();
+                var toDate = $('#to-date').val();
+                $.post("Controllers.php", {
+                    function: "GetSales",
+                    userId: userId,
+                    fromDate: fromDate,
+                    toDate: toDate
+                },
+                function (data) {
+                    $('#table-container').html(data);
+                });
 
             });
 
@@ -221,6 +224,16 @@
                         if (typeId != 1) {
                             window.location.href = "index.html";
                         }
+                    });
+            }
+
+            function getSellers() {
+                $.post("Controllers.php", {
+                    function: "SellersDropdown",
+                },
+
+                    function (data) {
+                        $('#user-container').prepend(data);
                     });
             }
         </script>

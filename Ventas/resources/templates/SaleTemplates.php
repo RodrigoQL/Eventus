@@ -34,4 +34,23 @@
         $html .= "</table>";
         return $html;
     }
+
+    function SalesTable($sales){
+        $html = '<table class="table"> <tr> <th> Cliente </th> <th> Empresa </th> <th> Monto </th> <th> Factura </th> </tr>';
+
+        foreach($sales as $row) {
+            $name = $row['ClientName']." ".$row['ClientLastname'];
+            $html .= "<tr> <td>";
+            $html .= $name;
+            $html .= "</td> <td>";
+            $html .= $row['ClientCompany'];
+            $html .= "</td> <td>";
+            $html .= $row['Amount'];
+            $html .= "</td> <td>";
+            $html .= $row['BillName'];
+            $html .= "</td> </tr>";
+        }
+        $html .= "</table>";
+        return $html;
+    }
 ?>

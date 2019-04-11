@@ -34,7 +34,7 @@
 
     function CheckSession(){
         session_start();
-        $userID = $_SESSION['UserID'];
+        $userID = $_SESSION['UserTypeID'];
         return $userID;
     }
 

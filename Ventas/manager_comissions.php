@@ -121,30 +121,6 @@
             <!-- main content area start -->
             <div class="main-content-inner">
                 <h1>Comisiones<h2>
-                        <!-- PHP AQUI -->
-                        <table>
-                            <tr>
-                                <th scope="col">dog</th>
-                                <th scope="col">cat</th>
-                                <th scope="col">horse</th>
-                                <th scope="col">iguana</th>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>2</td>
-                                <td>10</td>
-                                <td>500</td>
-                            </tr>
-
-                        </table>
-                        <!-- /PHP AQUI -->
-                        <p> Filtrar por fecha de ingreso del:</p>
-                        <input type="date"> al <input type="date"><br>
-                        <button type="button" class="btn btn-primary">Aceptar</button>
-                        <p>Filtrar por fecha de pago del:</p>
-                        <input type="date"> al <input type="date"><br>
-                        <button type="button" class="btn btn-primary">Aceptar</button>
-
                         <table id="myTable">
                             <thead>
                                 <tr>
@@ -156,6 +132,54 @@
                                 <?php echo HtmlComissionsTable(); ?>
                             </tbody>
                         </table>
+                        <div class="card-body">
+                            <h4 class="header-title">Thead Primary</h4>
+                            <div class="single-table">
+                                <div class="table-responsive">
+                                    <table class="table text-center">
+                                        <thead class="text-uppercase bg-primary">
+                                            <tr class="text-white">
+                                                <th scope="col">ID</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">date</th>
+                                                <th scope="col">price</th>
+                                                <th scope="col">action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>09 / 07 / 2018</td>
+                                                <td>$120</td>
+                                                <td><i class="ti-trash"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>jone</td>
+                                                <td>09 / 07 / 2018</td>
+                                                <td>$150</td>
+                                                <td><i class="ti-trash"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>Mark</td>
+                                                <td>09 / 07 / 2018</td>
+                                                <td>$120</td>
+                                                <td><i class="ti-trash"></i></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">1</th>
+                                                <td>jone</td>
+                                                <td>09 / 07 / 2018</td>
+                                                <td>$150</td>
+                                                <td><i class="ti-trash"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
             </div>
         </div>
 

@@ -21,6 +21,18 @@
         return $html;
     }
 
+    function ComissionsSellerTable($comissions){
+        $html = '';
+        foreach($comissions as $row)
+        {
+            $html .= '<tr>';
+            $html .= '<td>'.$row['producto'].'</td>';
+            $html .= '<td>'.$row['total'].'</td>';
+            $html .= '</tr>';
+        }
+        return $html;
+    }
+
     function ProductsTable($products){
         $html = '<table class="table"> <tr> <th> Nombre </th> <th> Comisión </th> </tr>';
 

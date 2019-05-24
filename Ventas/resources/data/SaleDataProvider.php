@@ -29,4 +29,9 @@
     	$sql = "select sum( (t1.Amount * (t2.Comission) ) ) as total,t3.Name as vendedor from Sale as t1,ProductType as t2,User as t3 where t1.Validated = 1 and t1.SellerID = t3.id and t1.ProductTypeID = t2.id group by t1.SellerID";
 	    return SqlSelect($sql);
 	}
+
+	function GetProductsComissions($seller){
+    	$sql = "select sum( (t1.Amount * (t2.Comission) ) ) as total,t2.Name as producto from Sale as t1,ProductType as t2,User as t3 where t1.Validated = 1 and t1.SellerID = t3.id and t1.ProductTypeID = t2.id and t1.SellerID = " . $seller . "group_by t1.ProductTypeID";
+	    return SqlSelect($sql);
+	}
 ?>

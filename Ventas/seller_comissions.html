@@ -116,34 +116,24 @@
 
             <!-- main content area start -->
             <div class="main-content-inner" style="padding: 50px;">
-                <h1>Comisiones de Jorge</h1>
-                <div id="comissions">
-                    <label for="product-line">Linea de producto:</label>
-
-                </div>
-
-                <p> Filtrar por fecha de ingreso del:</p>
-                <input type="date"> al <input type="date"><br>
-                <button type="button" id="submitButton" class="btn btn-primary">Aceptar</button>
-
-                <table id="myTable">
-                    <thead>
-                        <tr>
-                            <th>Column 1</th>
-                            <th>Column 2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Isaac</td>
-                            <td>Te</td>
-                        </tr>
-                        <tr>
-                            <td>amo</td>
-                            <td>corazon</td>
-                        </tr>
-                    </tbody>
-                </table>
+                    <h1>Comisiones</h1>
+                    <div class="card-body">
+                        <div class="single-table">
+                            <div class="table-responsive">
+                                <table id="myTable" class="table text-center">
+                                    <thead class="text-uppercase bg-primary">
+                                        <tr class="text-white">
+                                            <th scope="col">Vendedor</th>
+                                            <th scope="col">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php echo HtmlComissionsTable(); ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
 
             </div>
             <!-- main content area end -->

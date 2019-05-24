@@ -16,6 +16,12 @@
         return $html; 
     }
 
+    function HtmlComissionsProductsTable($sellerid){
+        $comissions = GetProductsComissions($sellerid);
+        $html = ComissionsSellerTable($comissions);
+        return $html; 
+    }
+
     function CreateSale($clientName, $clientLastname, $clientCompany, $amount, $payDate, $productTypeID, $billNumber){
         session_start();
         $userID = $_SESSION['UserID'];

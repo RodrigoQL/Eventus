@@ -5,7 +5,7 @@
     $db_name = "wwwplust_Eventusdb";
 
     function sqlSelect($sql){
-        global $db_servername, $db_username, $password, $db_name;
+        global $db_servername, $db_username, $db_password, $db_name;
         $conn = mysqli_connect( $db_servername, $db_username, $db_password, $db_name);
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());

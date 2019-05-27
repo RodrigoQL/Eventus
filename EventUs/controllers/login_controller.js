@@ -9,6 +9,7 @@ $(document).ready(function() {
         },
         function(data, status){
             var typeId = parseInt(data);
+            
             if (typeId) {
                 if (typeId == 1) {
                     window.location.href = "admin.php";
@@ -16,6 +17,8 @@ $(document).ready(function() {
                     window.location.href = "business_manage.php";
                 } else if (typeId == 3){
                     window.location.href = "user.php";
+                }else{
+                    $("#alert").text("Credenciales Incorrectas");
                 }
             } else {
                 $("#alert").text("Credenciales Incorrectas");

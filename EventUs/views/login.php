@@ -17,21 +17,19 @@
         </head>
         <body class="body">
             <div style="margin: 0 auto; width: 200px; height: 150px; padding:30px;">
-            <form id="form1" name="form1" method="post" action="login.php">
                 <p>
                     <label for="textfield">Usuario:</label> <br />
-                    <input type="text" name="user" id="user" />
+                    <input type="text" name="user" id="username" />
                 </p>
                 <p>
                     <label for="password">Password:</label> <br />
-                    <input type="password" name="pass" id="pass" />
+                    <input type="password" name="pass" id="password" />
                 </p>
                 <p>
                     <input type="submit" name="submit" id="submit" value="Submit" />
                 </p>
                 <p id="alert">
                 </p>
-            </form>
-        </div>
-    </body>
+            </div>
+        </body>
 </html>

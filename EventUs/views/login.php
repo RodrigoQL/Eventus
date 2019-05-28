@@ -26,7 +26,8 @@
                     <input type="password" name="pass" id="password" />
                 </p>
                 <p>
-                    <input type="submit" name="submit" id="submit" value="Submit" />
+                    <input type="button" name="submit" id="submit" value="Ingresar" />
+                    <input type="button" name="create_user" id="create_user" value="Crear Cuenta" />
                 </p>
                 <p id="alert">
                 </p>

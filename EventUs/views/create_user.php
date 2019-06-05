@@ -2,7 +2,7 @@
     <html>
         <head>
 
-            <title>.:: Eventus Login ::.</title>
+            <title>.:: Eventus - Registro ::.</title>
             <meta charset="utf-8">
     
             <!-- RENDERING CORRECTO DEPENDIENDO DEL TAMANO DE LA PANTALLA -->

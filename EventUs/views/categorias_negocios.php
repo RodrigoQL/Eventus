@@ -51,6 +51,8 @@ include("../models/categorias.php");
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Descripción</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
               </tr>
             </thead>
             <tbody>
@@ -62,6 +64,20 @@ include("../models/categorias.php");
                   <td><?php echo $categoria['Id']; ?></td>
                   <td><?php echo $categoria['Name']; ?></td>
                   <td><?php echo $categoria['Description']; ?></td>
+                  <td>
+                    <form method="post" action="editar_categoria.php">
+                      <input type="hidden" name="id" value="<?php echo $categoria['Id']; ?>">
+                      <input type="hidden" name="name" value="<?php echo $categoria['Name']; ?>">
+                      <input type="hidden" name="description" value="<?php echo $categoria['Description']; ?>">
+                      <button class="btn btn-lg btn-warning btn-block boton_tabla" type="submit" id="submit">Editar</button>
+                    </form>
+                  </td>
+                  <td>
+                    <form method="post" action="../models/eliminar_categoria.php">
+                      <input type="hidden" name="id" value="<?php echo $categoria['Id']; ?>">
+                      <button class="btn btn-lg btn-danger btn-block boton_tabla" type="submit" id="submit">Eliminar</button>
+                    </form>
+                  </td>
                 </tr>
                 <?php }}else{ ?>
                 <tr>

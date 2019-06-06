@@ -19,36 +19,12 @@
             <div id="navbar">
                 <input type="button" id="cart-button" value="Carrito de Compras" />
             </div>
-            <div id="category-list">
-                <div class="category">
-                    <h3 class="category-title">Título de Categoría</h3>
-                    <img class="category-image" src="https://www.w3schools.com/html/pic_trulli.jpg">
-                </div>
-                <div class="category">
-                    <h3 class="category-title">Título de Categoría 2</h3>
-                    <img class="category-image" src="https://www.w3schools.com/html/pic_trulli.jpg">
-                </div>
-                <div class="category">
-                    <h3 class="category-title">Título de Categoría 3</h3>
-                    <img class="category-image" src="https://www.w3schools.com/html/pic_trulli.jpg">
-                </div>
+            <h1>Selecciona una categoria</h1>
+            <div id="category-list" class="row">
+                Cargando categorías....
             </div>
             <br>
             <div id="business-list">
-                <div class="business">
-                    <h3 class="business-title">Nombre de negocio 1</h3>
-                    <img class="business-image" src="https://image.shutterstock.com/image-vector/restaurant-logo-template-260nw-1254530365.jpg">
-                    <div class="business-stars">
-                        Estrellas aquí 
-                    </div>
-                </div>
-                <div class="business">
-                    <h3 class="business-title">Nombre de negocio 2</h3>
-                    <img class="business-image" src="https://image.shutterstock.com/image-vector/restaurant-logo-template-260nw-1254530365.jpg">
-                    <div class="business-stars">
-                        Estrellas aquí 
-                    </div>
-                </div>
             </div>
         </body>
 </html>

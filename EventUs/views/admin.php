@@ -34,7 +34,7 @@ include("../models/admin.php");
           <a class="nav-link" href="categorias_negocios.php">Categorías de Negocios</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="negocios.php">Reporte de Ventas</a>
+          <a class="nav-link" href="reporte_ventas.php">Reporte de Ventas</a>
         </li>
       </ul>
     </div>

@@ -81,7 +81,7 @@ include("../models/categorias.php");
                 </tr>
                 <?php }}else{ ?>
                 <tr>
-                  <td colspan="3">No hay resultados</td>
+                  <td colspan="5">No hay resultados</td>
                 </tr>
               <?php } ?>
             </tbody>

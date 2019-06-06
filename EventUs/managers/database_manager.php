@@ -10,7 +10,7 @@
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-
+        mysqli_query($conn,"SET NAMES 'utf8'");
         $result = mysqli_query($conn, $sql);
         while( $row = mysqli_fetch_array($result,MYSQLI_BOTH) ){
             $rows[] = $row;

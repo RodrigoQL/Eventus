@@ -11,3 +11,6 @@ body {
   font-size: 14px;
   margin: 2em 0;
 }
+table thead th,table tbody td{
+  text-align: center;
+}

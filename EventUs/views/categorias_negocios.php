@@ -5,7 +5,7 @@ include("../models/categorias.php");
 <html lang="es">
   <head>
   <meta charset="utf-8">
-  <title>Eventus - Negocios</title>
+  <title>Eventus - Categorías de Negocios</title>
   <!-- RENDERING CORRECTO DEPENDIENDO DEL TAMANO DE LA PANTALLA -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- LLAMA REFERENCIAS CDN DE BOOTSTRAP Y LIBRERIAS REQUERIDAS POR BOOTSTRAP -->
@@ -56,11 +56,16 @@ include("../models/categorias.php");
             <tbody>
               <?php 
               $categorias = seleccionar_categorias();
-              foreach ($categorias as $key => $negocio) { ?>
+              if(!empty($categorias)){
+              foreach ($categorias as $key => $categoria) { ?>
                 <tr>
-                  <td><?php echo $negocio['Id']; ?></td>
-                  <td><?php echo $negocio['Name']; ?></td>
-                  <td><?php echo $negocio['Description']; ?></td>
+                  <td><?php echo $categoria['Id']; ?></td>
+                  <td><?php echo $categoria['Name']; ?></td>
+                  <td><?php echo $categoria['Description']; ?></td>
+                </tr>
+                <?php }}else{ ?>
+                <tr>
+                  <td colspan="3">No hay resultados</td>
                 </tr>
               <?php } ?>
             </tbody>

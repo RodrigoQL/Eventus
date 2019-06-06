@@ -58,6 +58,7 @@ include("../models/negocios.php");
             <tbody>
               <?php 
               $negocios = seleccionar_negocios();
+              if(!empty($negocios)){
               foreach ($negocios as $key => $negocio) { ?>
                 <tr>
                   <td><?php echo $negocio['Id']; ?></td>
@@ -65,6 +66,10 @@ include("../models/negocios.php");
                   <td><?php echo $negocio['Description']; ?></td>
                   <td><?php echo $negocio['Categoria']; ?></td>
                   <td><?php echo $negocio['Rating']; ?></td>
+                </tr>
+              <?php }}else{ ?>
+                <tr>
+                  <td colspan="5">No hay resultados</td>
                 </tr>
               <?php } ?>
             </tbody>

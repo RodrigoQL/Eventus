@@ -11,6 +11,12 @@ body {
   font-size: 14px;
   margin: 2em 0;
 }
+.boton_tabla{
+  font-size: 14px;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 700;
+}
 table thead th,table tbody td{
   text-align: center;
 }

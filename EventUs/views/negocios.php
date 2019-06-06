@@ -1,8 +1,11 @@
+<?php
+include("../models/negocios.php");
+?>
 <!doctype html>
-<html>
-<head>
-  <title>Eventus - Negocios</title>
+<html lang="es">
+  <head>
   <meta charset="utf-8">
+  <title>Eventus - Negocios</title>
   <!-- RENDERING CORRECTO DEPENDIENDO DEL TAMANO DE LA PANTALLA -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- LLAMA REFERENCIAS CDN DE BOOTSTRAP Y LIBRERIAS REQUERIDAS POR BOOTSTRAP -->
@@ -42,6 +45,30 @@
         <div class="card-body">
           <h5 class="card-title">Negocios</h5>
           <a href="crear_negocio.php" class="btn btn-lg btn-primary btn-block boton_nuevo">Crear Negocio</a>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Categoría</th>
+                <th>Rating</th>
+              </tr>
+            </thead>
+            <tbody>
+              <?php 
+              $negocios = seleccionar_negocios();
+              foreach ($negocios as $key => $negocio) { ?>
+                <tr>
+                  <td><?php echo $negocio['Id']; ?></td>
+                  <td><?php echo $negocio['Name']; ?></td>
+                  <td><?php echo $negocio['Description']; ?></td>
+                  <td><?php echo $negocio['Categoria']; ?></td>
+                  <td><?php echo $negocio['Rating']; ?></td>
+                </tr>
+              <?php } ?>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>

@@ -27,8 +27,7 @@ function category_methods(){
 function business_methods(){
     $('.business-button').click(function() {
         var index = $(this).data('index');
-
-        alert("Id: " + index);
+        window.location.href = "business.php?BusinessId=" + index;
     });
 }
 

@@ -17,7 +17,11 @@
         }
 
         mysqli_close($conn);
-        return( $rows );
+        if(!isset($rows)){
+            return false;
+        }else{
+            return( $rows );
+        }
     }
 
 

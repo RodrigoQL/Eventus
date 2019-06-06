@@ -44,7 +44,7 @@ include("../models/categorias.php");
       <div class="card card-signin my-5">
         <div class="card-body">
           <h5 class="card-title">Categorías de Negocios</h5>
-          <a href="crear_negocio.php" class="btn btn-lg btn-primary btn-block boton_nuevo">Crear Categoría</a>
+          <a href="crear_categoria.php" class="btn btn-lg btn-primary btn-block boton_nuevo">Crear Categoría</a>
           <table class="table">
             <thead>
               <tr>

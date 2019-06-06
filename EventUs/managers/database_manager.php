@@ -42,5 +42,22 @@
         }    
 
         mysqli_close($conn);
-    }    
+    }
+
+    function sqlDelete($query){
+        global $db_servername, $db_username, $db_password, $db_name;
+        $conn = mysqli_connect( $db_servername, $db_username, $db_password, $db_name);
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        $sql = mysqli_query($conn, $query);
+        if ($conn->query($sql) === TRUE) {
+            return true;
+        } else {
+            return false;
+        }    
+
+        mysqli_close($conn);
+    }
 ?>

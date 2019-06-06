@@ -1,0 +1,28 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+.container{
+  margin: 0 auto;
+  max-width: 100%;
+}
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.form-label-group input, .form-label-group textarea{
+  height: auto;
+  border-radius: 2rem;
+}
+.form-label-group>input,
+.form-label-group textarea{
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+.boton_nuevo{
+  font-size: 14px;
+  margin: 2em 0;
+}

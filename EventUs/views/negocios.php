@@ -53,6 +53,8 @@ include("../models/negocios.php");
                 <th>Descripción</th>
                 <th>Categoría</th>
                 <th>Rating</th>
+                <th>Editar</th>
+                <th>Eliminar</th>
               </tr>
             </thead>
             <tbody>
@@ -66,10 +68,22 @@ include("../models/negocios.php");
                   <td><?php echo $negocio['Description']; ?></td>
                   <td><?php echo $negocio['Categoria']; ?></td>
                   <td><?php echo $negocio['Rating']; ?></td>
+                  <td>
+                    <form method="post" action="editar_negocio.php">
+                      <input type="hidden" name="id" value="<?php echo $negocio['Id']; ?>">
+                      <button class="btn btn-lg btn-warning btn-block boton_tabla" type="submit" id="submit">Editar</button>
+                    </form>
+                  </td>
+                  <td>
+                    <form method="post" action="../models/eliminar_negocio.php">
+                      <input type="hidden" name="id" value="<?php echo $negocio['Id']; ?>">
+                      <button class="btn btn-lg btn-danger btn-block boton_tabla" type="submit" id="submit">Eliminar</button>
+                    </form>
+                  </td>
                 </tr>
               <?php }}else{ ?>
                 <tr>
-                  <td colspan="5">No hay resultados</td>
+                  <td colspan="7">No hay resultados</td>
                 </tr>
               <?php } ?>
             </tbody>

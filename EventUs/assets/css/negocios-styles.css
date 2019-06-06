@@ -14,3 +14,9 @@ body {
 table thead th,table tbody td{
   text-align: center;
 }
+.boton_tabla{
+  font-size: 14px;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 700;
+}

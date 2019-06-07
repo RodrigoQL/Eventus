@@ -16,18 +16,18 @@
                 <th></th>
             </tr>
         </thead>
-        <tbody>
-            <tr>';
+        <tbody>';
     foreach($package_list as $row) {
+        $html .= '<tr>';
         $html .= '<td class="package-name">'.$row['Name'].'</td>';
         $html .= '<td class="package-description">'.$row['Description'].'</td>';
         $html .= '<td class="package-price">'.'$'.$row['Price'].'</td>';
-        $html .= '<td><button data-index="'.$row['Id'].'" class="package-button col-4 col-sm-3"> Agregar a Carrito
+        $html .= '<td><button data-index="'.$row['Id'].'" class="btn btn-warning package-button"> Agregar a Carrito
         </button></td>';
         $html .= '</tr>';
-        $html .= '</tbody>
-            </table>';
     }
+    $html .= '</tbody>
+            </table>';
     
     echo $html;
 ?>

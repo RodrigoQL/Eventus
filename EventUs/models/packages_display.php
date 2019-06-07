@@ -6,15 +6,27 @@
     $package_list = sqlSelect($sql);
 
     $html = '';
+
+    $html = '<table class="table package">
+        <thead>
+            <tr>
+                <th>Paquete</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>';
     foreach($package_list as $row) {
-        $html .= '<div class="package row">';
-
-        $html .= '<h4 class="package-name col-4 col-sm-3">'.$row['Name'].'</h4>';;
-        $html .= '<h4 class="package-price col-4 col-sm-2"> $'.$row['Price'].'.00 </h4>';
-        $html .= '<button data-index="'.$row['Id'].'" class="package-button col-4 col-sm-3"> Agregar a Carrito </button>';
-        $html .= '<p class="package-description col-12">'.$row['Description'].'</p>';
-
-        $html .= '</div>';
+        $html .= '<td class="package-name">'.$row['Name'].'</td>';
+        $html .= '<td class="package-description">'.$row['Description'].'</td>';
+        $html .= '<td class="package-price">'.'$'.$row['Price'].'</td>';
+        $html .= '<td><button data-index="'.$row['Id'].'" class="package-button col-4 col-sm-3"> Agregar a Carrito
+        </button></td>';
+        $html .= '</tr>';
+        $html .= '</tbody>
+            </table>';
     }
     
     echo $html;

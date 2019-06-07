@@ -8,7 +8,7 @@
     $insert_email = $_POST['email'];
     $insert_phone = $_POST['phone'];
     
-    $sql = "INSERT INTO User (Username, Password, Name, Lastname, Email, Phone, IdUserType) VALUES ('".$insert_username."', '".$insert_password."', '".$insert_name."', '".$insert_lastname."', '".$insert_email."', '".$insert_phone."', 1);";
+    $sql = "INSERT INTO User (Username, Password, Name, Lastname, Email, Phone, IdUserType) VALUES ('".$insert_username."', '".$insert_password."', '".$insert_name."', '".$insert_lastname."', '".$insert_email."', '".$insert_phone."', 3);";
     $recordsArray = sqlInsert($sql);
     
     echo "1";

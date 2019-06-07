@@ -1,5 +1,8 @@
 <?php
 include("../models/admin.php");
+include("../models/session.php");
+
+CheckSession();
 ?>
 <!doctype html>
 <html>

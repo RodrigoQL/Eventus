@@ -1,5 +1,8 @@
 <?php
 include("../models/categorias.php");
+include("../models/session.php");
+
+CheckSession();
 ?>
 <!doctype html>
 <html lang="es">

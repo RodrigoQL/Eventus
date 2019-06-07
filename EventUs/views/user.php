@@ -28,15 +28,18 @@
     <nav id="navbar" class="navbar navbar-dark bg-dark justify-content-between">
         <a class="navbar-brand">EVENTUS</a>
         <a id="cart-button" class="btn btn-info btn-lg">
-        <span class="glyphicon glyphicon-search"></span> Carrito de Compras
+            <span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras
         </a>
     </nav>
-    <h1 align="center">Selecciona el tipo de negocio</h1>
-    <div id="category-list" class="row">
-        Cargando categorías....
-    </div>
-    <br>
-    <div id="business-list">
+
+    <div class="container">
+        <h1 align="center">Selecciona el tipo de negocio</h1>
+        <div id="category-list" class="row">
+            Cargando categorías....
+        </div>
+        <br>
+        <div id="business-list">
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

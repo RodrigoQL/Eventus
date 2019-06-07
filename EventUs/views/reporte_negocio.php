@@ -55,7 +55,7 @@ include("../models/reporte_negocio.php");
             <tbody>
               <?php
               /*session*/
-              $id_user = 1;
+              $id_user = 5;
               /*session*/
               $ventas = seleccionar_ventas_negocio($id_user);
               if(!empty($ventas)){

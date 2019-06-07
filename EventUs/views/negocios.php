@@ -77,7 +77,9 @@ include("../models/negocios.php");
                   </td>
                   <td>
                     <form method="post" action="../models/eliminar_negocio.php">
-                      <input type="hidden" name="id" value="<?php echo $negocio['Id']; ?>">
+                      <input type="hidden" name="id_negocio" value="<?php echo $negocio['Id']; ?>">
+                      <!-- Session -->
+                      <input type="hidden" name="id_user" value="1">
                       <button class="btn btn-lg btn-danger btn-block boton_tabla" type="submit" id="submit">Eliminar</button>
                     </form>
                   </td>

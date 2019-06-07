@@ -1,166 +1,183 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>EVENTUS</title>
 
 	<meta charset="utf-8">
-  	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
-  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
-	
+
 </head>
+
 <body>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid" id="nav_size">
-    <div class="navbar-header">
-    <button class ="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"><span class="glyphicon glyphicon-menu-hamburger"></span></button>
-      <a class="navbar-brand" href="#inicio" id="site_brand">EVENTUS</a>
-    </div>
-    
-    <ul class="nav navbar-nav navbar-right collapse navbar-collapse navbar-header navHeaderCollapse">
-      <li><a class="active" href="#inicio">Inicio</a></li>
-      <li><a href="#paquetes">Paquetes</a></li>
-	  <li><a href="#bebidas">Bebidas</a></li>
-	  <li><a href="#comida">Comida</a></li>
-	  <li><a href="#mobiliario">Mobiliario</a></li>
-	  <li><a href="#musica_ambiente">Musica/Ambiente</a></li>
-	  <li><a href="#decoracion">Decoracion</a></li>
-	  <li><a href="#infantil">Infantil</a></li>
-	  <li><a href="#carrito"><span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras</a></li>
-    </ul>
-  </div>
-</nav>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid" id="nav_size">
+			<div class="navbar-header">
+				<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse"><span
+						class="glyphicon glyphicon-menu-hamburger"></span></button>
+				<a class="navbar-brand" href="#inicio" id="site_brand">EVENTUS</a>
+			</div>
 
-<div class="hero-image">
-  <div class="hero-text">
-    <h1 style="font-size:50px">¡Arma tu evento como si fueras al super!</h1>
-    <h3>En tan solo 3 sencillos pasos</h3>
-    <br>
-    <a href="#section_1"class="btn btn-primary" id="coupon">Conoce más</a>
-  </div>
-</div>
+			<ul class="nav navbar-nav navbar-right collapse navbar-collapse navbar-header navHeaderCollapse">
+				<li><a class="active" href="#inicio">Inicio</a></li>
+				<li><a href="views/login.php">Salones</a></li>
+				<li><a href="views/login.php">Comida</a></li>
+				<li><a href="views/login.php">Decoracion</a></li>
+				<li><a href="views/login.php">
+					<button class="btn btn-warning" style="color: white;">
+						¡Comienza ahora!
+					</button>
+				</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
-<div id="section_1">
-	<h2 class="title">¿Te gustaría armar tu evento o ser socio?</h2>
-	<div class="container">
-	  <div class="row justify-content-center" style="text-align: center">
-	  	<div class="col-sm-6">
-	  		<br><br>
-	  		<img src="assets/armar.png" class="image">
-	  		<h3>Armar evento</h3>
-	  		<button data-toggle="collapse" data-target="#build_party" class="btn btn-primary" id="user_button">Conoce más</button>
-	  	</div>
-  		<div class="col-sm-6">
-  			<br><br>
-  			<img src="assets/partners.png" class="image">
-  			<h3>Socio</h3>
-  			<button data-toggle="collapse" data-target="#partner" class="btn btn-primary" id="user_button">Conoce más</button>
-  		</div>
-	  </div>
-	</div>
-</div>
-
-<div id="section_3">
-	<div id= "build_party" class="collapse">
-		<h2 class="title">¡Crea tu evento en tan solo 3 sencillos pasos!</h2>
-		<div class="container">
-		  <div class="row justify-content-center" style="text-align: center">
-		  	<div class="col-sm-4">
-		  		<br><br>
-		  		<img src="assets/sign_in.PNG" class="image">
-		  		<h3>Paso 1</h3>
-		  		<p>Crea una cuenta e ingresa</p>
-		  	</div>
-	  		<div class="col-sm-4">
-	  			<br><br>
-	  			<img src="assets/shopping_cart.png" class="image">
-		  		<h3>Paso 2</h3>
-		  		<p>Agrega al carrito los servicios que deseas contratar para tu evento</p>
-	  		</div>
-	  		<div class="col-sm-4">
-	  			<br><br>
-	  			<img src="assets/payment.png" class="image">
-		  		<h3>Paso 3</h3>
-		  		<p>¡Realiza el pago y tu evento estará listo!</p>
-	  		</div>
-		  </div>
+	<div class="hero-image">
+		<div class="hero-text">
+			<h1 style="font-size:50px">¡Arma tu evento como si fueras al super!</h1>
+			<h3>En tan solo 3 sencillos pasos</h3>
+			<br>
+			<a href="#section_1" class="btn btn-primary" id="coupon">Conoce más</a>
 		</div>
 	</div>
-	<div id= "partner" class="collapse">
-		<h2 class="title">¡Se parte de la vamilia EventUs!</h2>
+
+	<div id="section_1">
+		<h2 class="title">¿Te gustaría armar tu evento o ser socio?</h2>
 		<div class="container">
-		  <div class="row justify-content-center" style="text-align: center">
-		  	<div class="col-sm-4">
-		  		<br><br>
-		  		<img src="assets/sign_in.PNG" class="image">
-		  		<h3>Paso 1</h3>
-		  		<p>Crea una cuenta e ingresa</p>
-		  	</div>
-	  		<div class="col-sm-4">
-	  			<br><br>
-	  			<img src="assets/partner_form.png" class="image">
-		  		<h3>Paso 2</h3>
-		  		<p>Agrega al carrito los servicios que deseas contratar para tu evento</p>
-	  		</div>
-	  		<div class="col-sm-4">
-	  			<br><br>
-	  			<img src="assets/partners_multiple.png" class="image">
-		  		<h3>Paso 3</h3>
-		  		<p>¡Realiza el pago y tu evento estará listo!</p>
-	  		</div>
-		  </div>
+			<div class="row justify-content-center" style="text-align: center">
+				<div class="col-sm-6">
+					<br><br>
+					<img src="assets/armar.png" class="image">
+					<h3>Armar evento</h3>
+					<button data-toggle="collapse" data-target="#build_party" class="btn btn-primary"
+						id="user_button">Conoce más</button>
+				</div>
+				<div class="col-sm-6">
+					<br><br>
+					<img src="assets/partners.png" class="image">
+					<h3>Socio</h3>
+					<button data-toggle="collapse" data-target="#partner" class="btn btn-primary"
+						id="user_button">Conoce más</button>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
 
-<div id="section_3">
-	<div class="container">
-		<div class="row justify-content-center" style="text-align: center">
-		  	<div class="col-sm-6">
-		  		<h3>¡Contáctanos!</h3>
-		  		<p>Si tienes alguna pregunta o gustas promocionarte con nosotros, ¡contactanos!</p>
-		  	</div>
-		  	<div class="col-sm-6" id="contact">
-		  		<h3>Contacto</h3>
-		  		<form>
-		  			<div class="form-row">
-			  			<div class="form-group col-md-6">
-					      <label for="inputName">Nombre</label>
-					      <input type="text" class="form-control" id="inputName" placeholder="Nombre">
-					    </div>
-					    <div class="form-group col-md-6">
-					      <label for="inputLastName">Apellidos</label>
-					      <input type="text" class="form-control" id="inputLastName" placeholder="Apellidos">
-					    </div>
+	<div id="section_3">
+		<div id="build_party" class="collapse">
+			<h2 class="title">¡Crea tu evento en tan solo 3 sencillos pasos!</h2>
+			<div class="container">
+				<div class="row justify-content-center" style="text-align: center">
+					<div class="col-sm-4">
+						<br><br>
+						<img src="assets/sign_in.PNG" class="image">
+						<h3>Paso 1</h3>
+						<p>Crea una cuenta e ingresa</p>
 					</div>
-					<div class="form-row">
-						<div class="form-group col-md-6">
-					      <label for="inputPhone">Teléfono</label>
-					      <input type="number" class="form-control" id="inputPhone" placeholder="Teléfono">
-					    </div>
-					    <div class="form-group col-md-6">
-					      <label for="inputEmail">Correo</label>
-					      <input type="email" class="form-control" id="inputEmail" placeholder="E-Mail">
-					    </div>
+					<div class="col-sm-4">
+						<br><br>
+						<img src="assets/shopping_cart.png" class="image">
+						<h3>Paso 2</h3>
+						<p>Agrega al carrito los servicios que deseas contratar para tu evento</p>
 					</div>
-					<div class="form-row">
-						<div class="form-group">
-					      <label for="inputComment">Comentarios</label>
-					      <textarea class="form-control" rows="5" id="inputComment" placeholder="Comentarios"></textarea>
-					    </div>
+					<div class="col-sm-4">
+						<br><br>
+						<img src="assets/payment.png" class="image">
+						<h3>Paso 3</h3>
+						<p>¡Realiza el pago y tu evento estará listo!</p>
 					</div>
-		  		</form>
-		  	</div>
-		  	<br>
-	  	</div>
-  	</div>
-</div>
-<div class="footer">
-	<p align="center">Copyright YeahRight Co.</p>
-</div>
+				</div>
+				<button type="button" class="btn btn-warning" href="views/login.php">¡Comienza ahora!</button>
+			</div>
+		</div>
+		<div id="partner" class="collapse">
+			<h2 class="title">¡Se parte de la vamilia EventUs!</h2>
+			<div class="container">
+				<div class="row justify-content-center" style="text-align: center">
+					<div class="col-sm-4">
+						<br><br>
+						<img src="assets/sign_in.PNG" class="image">
+						<h3>Paso 1</h3>
+						<p>Crea una cuenta e ingresa</p>
+					</div>
+					<div class="col-sm-4">
+						<br><br>
+						<img src="assets/partner_form.png" class="image">
+						<h3>Paso 2</h3>
+						<p>Agrega al carrito los servicios que deseas contratar para tu evento</p>
+					</div>
+					<div class="col-sm-4">
+						<br><br>
+						<img src="assets/partners_multiple.png" class="image">
+						<h3>Paso 3</h3>
+						<p>¡Realiza el pago y tu evento estará listo!</p>
+					</div>
+				</div>
+
+				<a href="views/login.php">
+					<button class="btn btn-warning" style="color: white;">
+						¡Comienza ahora!
+					</button>
+				</a>
+
+
+			</div>
+		</div>
+	</div>
+
+	<div id="section_3">
+		<div class="container">
+			<div class="row justify-content-center" style="text-align: center">
+				<div class="col-sm-6">
+					<h3>¡Contáctanos!</h3>
+					<p>Si tienes alguna pregunta o gustas promocionarte con nosotros, ¡contactanos!</p>
+				</div>
+				<div class="col-sm-6" id="contact">
+					<h3>Contacto</h3>
+					<form>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputName">Nombre</label>
+								<input type="text" class="form-control" id="inputName" placeholder="Nombre">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputLastName">Apellidos</label>
+								<input type="text" class="form-control" id="inputLastName" placeholder="Apellidos">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6">
+								<label for="inputPhone">Teléfono</label>
+								<input type="number" class="form-control" id="inputPhone" placeholder="Teléfono">
+							</div>
+							<div class="form-group col-md-6">
+								<label for="inputEmail">Correo</label>
+								<input type="email" class="form-control" id="inputEmail" placeholder="E-Mail">
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group">
+								<label for="inputComment">Comentarios</label>
+								<textarea class="form-control" rows="5" id="inputComment"
+									placeholder="Comentarios"></textarea>
+							</div>
+						</div>
+					</form>
+				</div>
+				<br>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p align="center">Copyright YeahRight Co.</p>
+	</div>
 </body>
+
 </html>

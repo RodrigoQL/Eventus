@@ -47,6 +47,7 @@
                                         class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" />
                                     <input type="button" name="create_user" id="create_user" value="Crear Cuenta"
                                         class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" />
+                                        <a href="../index.html">Regresar al inicio</a>
                                 </p>
                                 <p id="alert">
                             </div>

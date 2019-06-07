@@ -30,6 +30,9 @@
         <a id="cart-button" class="btn btn-info btn-lg">
             <span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras
         </a>
+        <a id="cart-button" class="btn btn-info btn-lg" href="../logout.php">
+            <span></span> Salir
+        </a>
     </nav>
 
     <div class="container">

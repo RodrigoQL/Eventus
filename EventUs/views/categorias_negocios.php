@@ -1,5 +1,8 @@
 <?php
 include("../models/categorias.php");
+include("../models/session.php");
+
+CheckSession();
 ?>
 <!doctype html>
 <html lang="es">
@@ -38,6 +41,8 @@ include("../models/categorias.php");
         </li>
       </ul>
     </div>
+
+    <a class="btn btn-lg btn-primary btn-block boton_salir" href="../logout.php">Cerrar Sesión</a>
   </nav>
   <div class="row container">
     <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">

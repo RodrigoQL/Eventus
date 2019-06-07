@@ -20,3 +20,7 @@ body {
 table thead th,table tbody td{
   text-align: center;
 }
+.boton_salir{
+  width: 200px;
+  font-size: 14px;
+}

@@ -1,3 +1,8 @@
+<?php
+include("../models/session.php");
+
+CheckSession();
+?>
 <!doctype html>
 <html lang="es">
   <head>
@@ -36,6 +41,8 @@
         </li>
       </ul>
     </div>
+
+    <a class="btn btn-lg btn-primary btn-block boton_salir" href="../logout.php">Cerrar Sesión</a>
   </nav>
   <div class="row container">
     <div class="col-sm-6 col-md-6 col-lg-6 mx-auto">

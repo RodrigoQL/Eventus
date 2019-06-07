@@ -12,7 +12,7 @@ $(document).ready(function() {
             phone: $("#phone").val(),
         },
         function(data, status){
-            window.location.href = "user.php";
+            window.location.href = "login.php";
 		});
 	})
 });

@@ -25,7 +25,7 @@
                 <div class="card card-signin my-5">
                     <div class="card-body">
                         <h5 class="card-title text-center">Crear Cuenta</h5>
-                        <form class="form-signin">
+                        <div class="form-signin">
                             <div class="form-label-group">
                                 <input type="text" id="username" class="form-control" placeholder="Email address"
                                     required autofocus>
@@ -64,7 +64,7 @@
 
                             <button class="btn btn-lg btn-primary btn-block text-uppercase" id="submit">Crear Cuenta</button>
                             <p id="alert"></p>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>

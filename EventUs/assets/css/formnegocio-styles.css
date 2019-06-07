@@ -14,19 +14,16 @@ body {
   position: relative;
   margin-bottom: 1rem;
 }
-.form-label-group input, .form-label-group textarea{
+.form-label-group input, .form-label-group textarea,.form-label-group select{
   height: auto;
   border-radius: 2rem;
 }
 .form-label-group>input,
-.form-label-group textarea{
+.form-label-group textarea,
+.form-label-group select{
   padding: var(--input-padding-y) var(--input-padding-x);
 }
 .boton_nuevo{
   font-size: 14px;
   margin: 2em 0;
-}
-.boton_salir{
-  width: 200px;
-  font-size: 14px;
 }

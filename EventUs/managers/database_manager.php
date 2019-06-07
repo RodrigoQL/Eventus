@@ -31,7 +31,7 @@
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());
         }
-
+        mysqli_query($conn,"SET NAMES 'utf8'");
         $sql = mysqli_query($conn, $query);
         if ($conn->query($sql) === TRUE) {
             echo "New record created successfully";

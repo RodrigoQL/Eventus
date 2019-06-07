@@ -17,6 +17,7 @@ $(document).ready(function() {
       step: $("#step").val()
     },
     function(data, status){
+      alert(data);
       window.location.href = "business_manage.php";
 		});
 	})

@@ -7,6 +7,7 @@ $(document).ready(function() {
         },
         function(data, status)
         {
+            alert("Compra realizada con éxito");
             get_packages();
         });
     });

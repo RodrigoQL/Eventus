@@ -6,8 +6,8 @@
     $business_list = sqlSelect($sql);
 
     $html = '';
+    $html .= '<h3 align="center" class="business-title">Seleccione el negocio deseado: </h3>';
     foreach($business_list as $row) {
-        $html .= '<h3 align="center" class="business-title">Seleccione el negocio deseado: </h3>';
         $html .= '<div class="business">';
         $html .= '<div class="business-section">';
         $business_image = $row['LogoUrl'];

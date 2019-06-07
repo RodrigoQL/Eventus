@@ -69,7 +69,7 @@ CheckSession();
                   <td><?php echo $venta['Name']; ?></td>
                   <td><?php echo $venta['Username']; ?></td>
                   <td><?php echo $venta['CreatedDate']; ?></td>
-                  <td>$<?php echo number_format($venta['Total'], 2, '.', ','); ?></td>
+                  <td>$<?php echo number_format($venta['Price'], 2, '.', ','); ?></td>
                 </tr>
                 <?php }}else{ ?>
                   <tr>

@@ -1,6 +1,9 @@
 <?php
 include("../models/categorias.php");
 include("../models/negocio_perfil.php");
+include("../models/session.php");
+
+CheckSession();
 ?>
 <!doctype html>
 <html>
@@ -46,7 +49,7 @@ include("../models/negocio_perfil.php");
         <div class="card-body">
           <?php
           /*session*/
-          $id_user = 5;
+          $id_user = GetSessionUserId();
           /*session*/
           $perfil = seleccionar_perfil($id_user);
           if(empty($perfil)){

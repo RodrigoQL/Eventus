@@ -27,8 +27,8 @@
 <body class="body">
     <nav id="navbar" class="navbar navbar-dark bg-dark justify-content-between">
         <a class="navbar-brand">EVENTUS</a>
-        <a id="cart-button" class="btn btn-info btn-lg">
-            <span class="glyphicon glyphicon glyphicon-fast-backward"></span> Regresar
+        <a id="cart-button" class="btn btn-info btn-lg" href="user.php">
+            <span class="glyphicon glyphicon glyphicon-fast-backward" ></span> Regresar
         </a>
     </nav>
     <div class="container">

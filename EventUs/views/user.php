@@ -28,10 +28,10 @@
     <nav id="navbar" class="navbar navbar-dark bg-dark justify-content-between">
         <a class="navbar-brand " href="user.php">EVENTUS</a>
         <p>
-        <a id="cart-button" class="btn btn-info btn-lg" href="cart.php">
-            <span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras
-        </a>
-        <a id="cart-button" class="btn btn-info btn-lg" href="../logout.php">Salir</a></p>
+            <a id="cart-button" class="btn btn-info btn-lg" href="cart.php">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras
+            </a>
+            <a id="cart-button" class="btn btn-info btn-lg" href="../logout.php">Salir</a></p>
     </nav>
 
     <div class="container">
@@ -43,7 +43,11 @@
         <div id="business-list">
         </div>
     </div>
-
+    <p align="center"> ¡Registra tu propio negocio!
+        <a  class="btn btn-info btn-lg" href="business_manage.php">
+            <span class="glyphicon glyphicon glyphicon-list-alt"></span> Únete a Eventus
+        </a>
+    </p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script>

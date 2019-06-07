@@ -59,7 +59,9 @@
         <br>
         <div id="package-list">
         </div>
-
+        <a id="cart-button" class="btn btn-info btn-lg" href="user.php">
+            <span class="glyphicon glyphicon glyphicon-fast-backward" ></span> Regresar
+        </a>
     </div>
 </body>
 

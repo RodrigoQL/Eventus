@@ -68,7 +68,7 @@ CheckSession();
           }
           ?>
           <h5 class="card-title text-center">Actualizar Perfil</h5>
-          <form class="form-nueva-categoria">
+          <div class="form-nueva-categoria">
             <input type="hidden" id="id_negocio" value="<?php echo $perfil['Id']; ?>">
             <input type="hidden" id="id_user" value="<?php echo $id_user; ?>">
             <input type="hidden" id="id_location" value="<?php echo $perfil['IdLocation']; ?>">
@@ -111,7 +111,7 @@ CheckSession();
               <input type="number" min="0" id="step" class="form-control" placeholder="Paso de la Solicitud" required value="<?php echo $perfil['ApplicationStep']; ?>">
             </div>
             <button class="btn btn-lg btn-primary btn-block boton_nuevo" type="submit" id="submit">Guardar</button>
-          </form>
+          </div>
         </div>
       </div>
     </div>

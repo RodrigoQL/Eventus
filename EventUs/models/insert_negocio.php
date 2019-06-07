@@ -21,6 +21,7 @@
   if($id_negocio == 0){
     //Insert location
     $sql_location = "INSERT INTO Location (Name, Latitude, Longitude, Suburb, Street, Number) VALUES ('".$insert_name."', ".$insert_latitud.", ".$insert_longitud.",'".$insert_colonia."', '".$insert_calle."','".$insert_numero."');";
+    echo "Esta Agregando la Wea";
     sqlInsert($sql_location);
     //Obtener id de la ubicación
     $sql_obtener_location = "SELECT Id FROM Location order by Id desc limit 1";
@@ -35,12 +36,15 @@
     $sql_negocio = "INSERT INTO BusinessUser (IdUser, IdBusiness) VALUES (".$id_user.", ".$id_business.");";
     sqlInsert($sql_negocio);
   }else if($id_negocio > 0){
+    echo "actualizando la wea";
     //Actualizar business
     $sql_negocio = "UPDATE `Business` SET `Name`='".$insert_name."', `Description`='".$insert_description."', `LogoUrl`='".$insert_logo."',  `IdBusinessType`=".$insert_categoria.", `ApplicationStep`=".$insert_step." WHERE `Id`=".$id_negocio;
     sqlInsert($sql_negocio);
     //Actualizar location
     $sql_negocio = "UPDATE `Location` SET `Name`='".$insert_name."', `Latitude	`=".$insert_latitud.", `Longitude`=".$insert_longitud.",  `Suburb`='".$insert_colonia."', `Street`='".$insert_calle."',`Number`='".$insert_numero."' WHERE `Id`=".$id_location;
     sqlInsert($sql_negocio);
+  }else{
+    echo "ES NULO LA WEA";
   }
   echo "1";
 ?>

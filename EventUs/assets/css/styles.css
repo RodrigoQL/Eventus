@@ -1,0 +1,36 @@
+@media screen and (max-width: 600px) {
+    .category-title,
+    .business-title {
+        font-size: 10px;
+    }
+  }
+
+.navbar{
+    color: white;
+}
+.navbar-brand {
+    font-size: 40px;
+}
+
+.btn-info {
+    background-color: goldenrod;
+    border: none;
+}
+.btn-info:hover {
+    background-color: rgb(177, 135, 29) !important; 
+    border: none !important;
+}
+.btn-info:active,
+.btn-info:focus {
+    background-color: rgb(138, 105, 23) !important; 
+    border: none !important;
+}
+
+.row {
+    text-align: center;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    padding: 20px 0px;
+}

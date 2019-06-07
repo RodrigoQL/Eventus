@@ -1,5 +1,8 @@
 <?php
 include("../models/negocios.php");
+include("../models/session.php");
+
+CheckSession();
 ?>
 <!doctype html>
 <html lang="es">
@@ -71,7 +74,18 @@ include("../models/negocios.php");
                   <td><?php echo $negocio['Rating']; ?></td>
                   <td>
                     <form method="post" action="editar_negocio.php">
-                      <input type="hidden" name="id" value="<?php echo $negocio['Id']; ?>">
+                      <input type="hidden" name="Id" value="<?php echo $negocio['Id']; ?>">
+                      <input type="hidden" name="IdLocation" value="<?php echo $negocio['IdLocation']; ?>">
+                      <input type="hidden" name="Name" value="<?php echo $negocio['Name']; ?>">
+                      <input type="hidden" name="Description" value="<?php echo $negocio['Description']; ?>">
+                      <input type="hidden" name="LogoUrl" value="<?php echo $negocio['LogoUrl']; ?>">
+                      <input type="hidden" name="IdBusinessType" value="<?php echo $negocio['IdBusinessType']; ?>">
+                      <input type="hidden" name="Latitude" value="<?php echo $negocio['Latitude']; ?>">
+                      <input type="hidden" name="Longitude" value="<?php echo $negocio['Longitude']; ?>">
+                      <input type="hidden" name="Suburb" value="<?php echo $negocio['Suburb']; ?>">
+                      <input type="hidden" name="Street" value="<?php echo $negocio['Street']; ?>">
+                      <input type="hidden" name="Number" value="<?php echo $negocio['Number']; ?>">
+                      <input type="hidden" name="ApplicationStep" value="<?php echo $negocio['ApplicationStep']; ?>">
                       <button class="btn btn-lg btn-warning btn-block boton_tabla" type="submit" id="submit">Editar</button>
                     </form>
                   </td>

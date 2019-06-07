@@ -7,16 +7,25 @@
 
     $html = '';
     foreach($business_list as $row) {
-        $html .= '<div class="business col-4 col-sm-3 col-md-2">';
-        $html .= '<h3 class="business-title">'.$row['Name'].'</h3>';
+        $html .= '<h3 align="center" class="business-title">Seleccione el negocio deseado: </h3>';
+        $html .= '<div class="business">';
+        $html .= '<div class="business-section">';
         $business_image = $row['LogoUrl'];
         $html .= '<img class="business-image" src="'.$business_image.'" style="width:100%;">';
-        $html .= '<button data-index="'.$row['Id'].'" class="btn btn-ok business-button">Seleccionar</button>';
-        $html .= '<div class="business-stars">';
+        $html .= '</div>';
+        $html .= '<div class="business-section">';
+        $html .= '<h3 class="business-name">'.$row['Name'].'</h3>';
+        
+        $html .= '<button data-index="'.$row['Id'].'" class="btn btn-warning business-button">Seleccionar</button>';
+        $html .= '<div>';
+        $html .= '<br>';
+        $html .= '<p class="business-stars">Rating:';
         $rating = (int)$row['Rating'];
         for($i = 0; $i < $rating; $i++){
-            $html .= "* ";
+            $html .= '<span class="glyphicon glyphicon-heart"></span>';
         }
+        $html .= '</p>';
+        $html .= '</div>';
         $html .= '</div>';
         $html .= '</div>';
     }

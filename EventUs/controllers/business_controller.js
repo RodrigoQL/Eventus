@@ -15,6 +15,14 @@ $(document).ready(function() {
 function package_methods(){
     $('.package-button').click(function() {
         var index = $(this).data('index');
-        alert("aun no sirve, pero el Index es " + index);
+
+        $.post("../models/add_to_cart.php",
+        {
+            packageId: index
+        },
+        function(data, status)
+        {
+            alert("Paquete agregado al carrito de compras");
+        });
     });
 }

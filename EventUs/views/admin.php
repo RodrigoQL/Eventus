@@ -38,6 +38,8 @@ include("../models/admin.php");
         </li>
       </ul>
     </div>
+
+    <a class="btn btn-lg btn-primary btn-block boton_salir" href="#">Cerrar Sesión</a>
   </nav>
   <div class="row container">
     <div class="col-sm-3 col-md-3 col-lg-3 mx-auto">

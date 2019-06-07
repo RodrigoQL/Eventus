@@ -38,13 +38,14 @@ include("../models/negocios.php");
         </li>
       </ul>
     </div>
+
+    <a class="btn btn-lg btn-primary btn-block boton_salir" href="#">Cerrar Sesión</a>
   </nav>
   <div class="row container">
     <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">
       <div class="card card-signin my-5">
         <div class="card-body">
           <h5 class="card-title">Negocios</h5>
-          <a href="crear_negocio.php" class="btn btn-lg btn-primary btn-block boton_nuevo">Crear Negocio</a>
           <table class="table">
             <thead>
               <tr>

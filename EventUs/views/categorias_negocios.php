@@ -38,6 +38,8 @@ include("../models/categorias.php");
         </li>
       </ul>
     </div>
+
+    <a class="btn btn-lg btn-primary btn-block boton_salir" href="#">Cerrar Sesión</a>
   </nav>
   <div class="row container">
     <div class="col-sm-12 col-md-12 col-lg-12 mx-auto">

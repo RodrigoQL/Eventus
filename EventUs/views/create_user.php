@@ -62,7 +62,7 @@
                                 <label for="phone">Telefono</label>
                             </div>
 
-                            <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" id="submit">Crear Cuenta</button>
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" id="submit">Crear Cuenta</button>
                             <p id="alert"></p>
                         </form>
                     </div>

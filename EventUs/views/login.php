@@ -1,3 +1,34 @@
+<?php
+    include("../models/submit_login.php");
+    include("../models/session.php");
+
+    $my_user = $_POST['username'];
+    $my_pass = $_POST['password'];
+    
+    if( ($my_user <> "" ) && ( $my_pass <> "" ) ){	
+        $recordsArray = validateUser($my_user, $my_pass);
+        
+        $rowCount = count( $recordsArray );
+        
+        if( $rowCount > 0 ) {
+            SetSession($recordsArray[0]['Id'], $recordsArray[0]['IdUserType']);
+            $id_user_type = $recordsArray[0]['IdUserType'];
+        } else {
+            $id_user_type = 0;
+        }
+
+        if( $id_user_type == 1 ){
+            header( "Location:admin.php" );
+        } else if( $id_user_type == 2 ){
+            header( "Location:business_manage.php" );
+        } else if( $id_user_type == 3 ){
+            header( "Location:user.php" );
+        } else {
+            $label = "Error de Usuario y/o Password!";
+        }
+    }
+?>
+
 <!doctype html>
 <html>
 
@@ -29,27 +60,29 @@
                         <div class="row">
                             <div class="col-md-9 col-lg-8 mx-auto">
                                 <h3 class="login-heading mb-4">BIENVENIDO A EVENTUS</h3>
+                                <form id="form1" name="form1" method="post" action="login.php">
 
-                                <div class="form-label-group">
-                                    <input type="email" id="username" class="form-control"
-                                        placeholder="Ingresar Usuario" required autofocus>
-                                    <label for="username">Usuario</label>
-                                </div>
+                                    <div class="form-label-group">
+                                        <input type="text" id="username" class="form-control"
+                                            placeholder="Ingresar Usuario" name="username" required autofocus>
+                                        <label for="username">Usuario</label>
+                                    </div>
 
-                                <div class="form-label-group">
-                                    <input type="password" id="password" class="form-control"
-                                        placeholder="Ingresar Contraseña" required>
-                                    <label for="password">Contraseña</label>
-                                </div>
+                                    <div class="form-label-group">
+                                        <input type="password" id="password" class="form-control"
+                                            placeholder="Ingresar Contraseña" name="password" required>
+                                        <label for="password">Contraseña</label>
+                                    </div>
 
-                                <p>
-                                    <input type="button" name="submit" id="submit" value="Ingresar"
-                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" />
-                                    <input type="button" name="create_user" id="create_user" value="Crear Cuenta"
-                                        class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" />
-                                        <a href="../index.html">Regresar al inicio</a>
-                                </p>
-                                <p id="alert">
+                                    <p>
+                                        <input type="submit" name="submit" id="submit" value="Ingresar"
+                                            class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" />
+                                        <input type="button" name="create_user" id="create_user" value="Crear Cuenta"
+                                            class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" />
+                                            <a href="../index.html">Regresar al inicio</a>
+                                    </p>
+                                    <p id="alert"> <?php echo $label; ?> </p>
+                                </form>
                             </div>
                         </div>
                     </div>

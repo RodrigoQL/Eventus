@@ -1,5 +1,9 @@
 <?php
     include("../models/get_business.php");
+    include("../models/session.php");
+
+    CheckSession();
+
     $businessId = $_GET['BusinessId'];
     if ($businessId === NULL){
         header("Location: user.php");
@@ -41,18 +45,6 @@
             <br>
             <br>
             <div id="package-list">
-                <div class="package row">
-                    <h4 class="package-name col-4 col-sm-3"> Paquete 1 </h4>
-                    <h4 class="package-price col-4 col-sm-2"> $860.00 </h4>
-                    <button class="package-button col-4 col-sm-3"> Agregar a Carrito </button>
-                    <p class="package-description col-12"> Este paquete está shido </p>
-                </div>
-                <div class="package row">
-                    <h4 class="package-name col-4 col-sm-3"> Paquete 2 </h4>
-                    <h4 class="package-price col-4 col-sm-2"> $460.00 </h4>
-                    <button class="package-button col-4 col-sm-3"> Agregar a Carrito </button>
-                    <p class="package-description col-12"> Este paquete está más shido </p>
-                </div>
             </div>
         </body>
 </html>

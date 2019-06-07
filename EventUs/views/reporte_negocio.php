@@ -1,5 +1,8 @@
 <?php
 include("../models/reporte_negocio.php");
+include("../models/session.php");
+
+CheckSession();
 ?>
 <!doctype html>
 <html lang="es">
@@ -55,7 +58,7 @@ include("../models/reporte_negocio.php");
             <tbody>
               <?php
               /*session*/
-              $id_user = 5;
+              $id_user = CheckSession();
               /*session*/
               $ventas = seleccionar_ventas_negocio($id_user);
               if(!empty($ventas)){

@@ -22,7 +22,7 @@
         $html .= '<p class="business-stars">Rating:';
         $rating = (int)$row['Rating'];
         for($i = 0; $i < $rating; $i++){
-            $html .= '<span class="glyphicon glyphicon-heart"></span>';
+            $html .= '<span class="glyphicon glyphicon-heart" style="color:pink"></span>';
         }
         $html .= '</p>';
         $html .= '</div>';

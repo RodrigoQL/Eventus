@@ -37,10 +37,12 @@
 
 <body>
     <nav id="navbar" class="navbar navbar-dark bg-dark justify-content-between">
-        <a class="navbar-brand">EVENTUS</a>
-        <a id="cart-button" class="btn btn-info btn-lg">
-            <span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras
-        </a>
+        <a class="navbar-brand " href="user.php">EVENTUS</a>
+        <p>
+            <a id="cart-button" class="btn btn-info btn-lg" href="cart.php">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Carrito de Compras
+            </a>
+            <a id="cart-button" class="btn btn-info btn-lg" href="../logout.php">Salir</a></p>
     </nav>
     <div class="container">
         <div id="business-info" class="business">
@@ -57,7 +59,7 @@
         <br>
         <div id="package-list">
         </div>
-        
+
     </div>
 </body>
 

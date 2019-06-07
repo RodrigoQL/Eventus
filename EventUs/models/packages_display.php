@@ -20,8 +20,8 @@
     foreach($package_list as $row) {
         $html .= '<tr>';
         $html .= '<td class="package-name">'.$row['Name'].'</td>';
-        $html .= '<td class="package-description">'.$row['Description'].'</td>';
-        $html .= '<td class="package-price">'.'$'.$row['Price'].'</td>';
+        $html .= '<td class="package-description">'.$row['Description'].' </td>';
+        $html .= '<td class="package-price">'.'$'.$row['Price'].'.00 </td>';
         $html .= '<td><button data-index="'.$row['Id'].'" class="btn btn-warning package-button"> Agregar a Carrito
         </button></td>';
         $html .= '</tr>';

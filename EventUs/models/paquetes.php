@@ -1,8 +1,8 @@
 <?php
 include("../managers/database_manager.php");
 
-function seleccionar_paquetes(){    
-  $sql = "SELECT Id,Name,Description,Price,ImageUrl FROM Package";
+function seleccionar_paquetes($id_user) {
+  $sql = "SELECT P.Id, P.Name, P.Description, P.Price, P.ImageUrl FROM Package as P JOIN BusinessUser as B ON B.IdBusiness = P.IdBusiness WHERE B.IdUser = ".$id_user;
   $res = sqlSelect($sql);
   return $res;
 }

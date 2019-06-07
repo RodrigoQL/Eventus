@@ -67,7 +67,7 @@ CheckSession();
             </thead>
             <tbody>
               <?php 
-              $paquetes = seleccionar_paquetes();
+              $paquetes = seleccionar_paquetes($id_user);
               if(!empty($paquetes)){
               foreach ($paquetes as $key => $paquete) { ?>
                 <tr>

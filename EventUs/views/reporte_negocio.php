@@ -50,6 +50,7 @@ CheckSession();
             <thead>
               <tr>
                 <th>ID de la Orden</th>
+                <th>Paquete</th>
                 <th>Cliente</th>
                 <th>Fecha de Compra</th>
                 <th>Total</th>
@@ -58,13 +59,14 @@ CheckSession();
             <tbody>
               <?php
               /*session*/
-              $id_user = CheckSession();
+              $id_user = GetSessionUserId();
               /*session*/
               $ventas = seleccionar_ventas_negocio($id_user);
               if(!empty($ventas)){
               foreach ($ventas as $key => $venta) { ?>
                 <tr>
                   <td><?php echo $venta['Id']; ?></td>
+                  <td><?php echo $venta['Name']; ?></td>
                   <td><?php echo $venta['Username']; ?></td>
                   <td><?php echo $venta['CreatedDate']; ?></td>
                   <td>$<?php echo number_format($venta['Total'], 2, '.', ','); ?></td>
